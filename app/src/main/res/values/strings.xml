@@ -1,0 +1,18 @@
+<resources>
+    <!--<string name="app_name">FaisalAmirProfile</string>-->
+    <string name="app_name">FaisalAmirProfile</string>
+
+    <string name="text_name">Muhammad Faisal Amir</string>
+    <string name="text_job">Android Programmer</string>
+
+    <string name="text_link_github">github.com/amirisback</string>
+    <string name="text_link_linkedin">linkedin.com/in/faisalamircs</string>
+    <string name="text_link_dribbble">dribbble.com/faisalamircs</string>
+    <string name="text_link_medium">medium.com/@faisalamircs</string>
+
+    <string name="text_linkedin">Linkedin</string>
+    <string name="text_github">Github</string>
+    <string name="text_dribbble">Dribbble</string>
+    <string name="text_medium">Medium</string>
+
+</resources>
