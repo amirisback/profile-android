@@ -5,14 +5,24 @@
     <string name="text_name">Muhammad Faisal Amir</string>
     <string name="text_job">Android Programmer</string>
 
-    <string name="text_link_github">github.com/amirisback</string>
+
     <string name="text_link_linkedin">linkedin.com/in/faisalamircs</string>
-    <string name="text_link_dribbble">dribbble.com/faisalamircs</string>
+    <string name="text_link_github">github.com/amirisback</string>
     <string name="text_link_medium">medium.com/@faisalamircs</string>
+    <string name="text_link_dribbble">dribbble.com/faisalamircs</string>
+    <string name="text_link_facebook">facebook.com/faisalamircs</string>
+    <string name="text_link_twitter">twitter.com/faisalamircs</string>
+    <string name="text_link_playstore">FrogoBox</string>
+    <string name="text_link_instagram">instagram.com/faisalamircs</string>
 
     <string name="text_linkedin">Linkedin</string>
     <string name="text_github">Github</string>
     <string name="text_dribbble">Dribbble</string>
     <string name="text_medium">Medium</string>
+
+    <string name="text_edu_high_school">High School</string>
+    <string name="text_edu_high_school_sman1">SMAN 1 Probolinggo</string>
+    <string name="text_edu_high_school_year">2010 - 2013</string>
+
 
 </resources>
