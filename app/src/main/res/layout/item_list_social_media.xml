@@ -45,9 +45,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
-                android:text="TextView"
+                tools:text="@string/app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextBlack"
                 android:id="@+id/tv_link"
                 app:layout_constraintTop_toTopOf="@+id/img_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/img_icon" app:layout_constraintEnd_toEndOf="parent"

@@ -26,7 +26,8 @@ import kotlinx.android.synthetic.main.item_list_social_media.view.*
  * com.frogobox.faisalamirprofile.adapter
  *
  */
-data class SocialMediaAdapter (private val context: Context?, private val dataList: List<SocialMedia>) : RecyclerView.Adapter<SocialMediaAdapter.ViewHolder>() {
+
+class SocialMediaAdapter (private val context: Context?, private val dataList: List<SocialMedia>) : RecyclerView.Adapter<SocialMediaAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_social_media, parent, false))

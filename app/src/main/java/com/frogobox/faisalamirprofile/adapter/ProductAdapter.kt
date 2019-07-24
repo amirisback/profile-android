@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.model.Education
-import kotlinx.android.synthetic.main.item_list_education.view.*
+import com.frogobox.faisalamirprofile.model.Product
+import kotlinx.android.synthetic.main.item_list_product.view.*
 
 /**
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
  * FaisalAmirProfile
- * Copyright (C) 15/07/2019.
+ * Copyright (C) 24/07/2019.
  * All rights reserved
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
@@ -26,10 +26,10 @@ import kotlinx.android.synthetic.main.item_list_education.view.*
  * com.frogobox.faisalamirprofile.adapter
  *
  */
-class EducationAdapter (private val context: Context?, private val dataList: List<Education>) : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
+class ProductAdapter (private val context: Context?, private val dataList: List<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_education, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_product, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(dataList[position])
@@ -39,18 +39,13 @@ class EducationAdapter (private val context: Context?, private val dataList: Lis
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-        private val imgSchoolLogo = view.img_school_logo
-        private val tvEduInstitute = view.tv_edu_institute
-        private val tvEduLevel = view.tv_edu_level
-        private val tvEduMajor= view.tv_edu_major
-        private val tvEduYear = view.tv_edu_year
+        private val imgProductIcon = view.img_product_icon
+        private val tvProductName = view.tv_product_name
 
-        fun bindItem(data: Education) {
-            imgSchoolLogo.setImageResource(data.imageLogo)
-            tvEduLevel.text = data.level
-            tvEduInstitute.text = data.institute
-            tvEduMajor.text = data.major
-            tvEduYear.text = data.year
+        fun bindItem(data: Product) {
+            imgProductIcon.setImageResource(data.productIcon)
+            tvProductName.text = data.productName
+            tvProductName.setCompoundDrawablesWithIntrinsicBounds(data.productType, 0, 0, 0);
         }
     }
 }

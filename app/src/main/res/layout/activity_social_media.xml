@@ -8,29 +8,9 @@
         android:orientation="vertical"
         tools:context=".SocialMediaActivity">
 
-
-    <TextView
-            android:layout_marginTop="@dimen/dimen_big_16dp"
-            android:layout_marginStart="@dimen/dimen_big_16dp"
-            android:layout_marginEnd="@dimen/dimen_big_16dp"
-            android:text="Social Media"
-            android:textColor="@color/colorTextBlack"
-            android:textSize="@dimen/text_size_title_big_super_30sp"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"/>
-
-    <TextView
-            android:layout_marginStart="@dimen/dimen_big_16dp"
-            android:layout_marginEnd="@dimen/dimen_big_16dp"
-            android:text="Follow my social media account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"/>
+    <include layout="@layout/container_title"/>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="@dimen/dimen_medium_8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="8dp"

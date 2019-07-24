@@ -24,7 +24,8 @@
               android:layout_margin="@dimen/dimen_big_16dp">
 
     <TextView
-            android:text="@string/title_education"
+            android:id="@+id/tv_content_title"
+            android:text="@string/title_title"
             android:textColor="@color/colorTextBlack"
             android:textSize="@dimen/text_size_title_big_super_30sp"
             android:textStyle="bold"
@@ -32,7 +33,8 @@
             android:layout_height="wrap_content"/>
 
     <TextView
-            android:text="@string/subtitle_education"
+            android:id="@+id/tv_content_subtitle"
+            android:text="@string/subtitle_subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

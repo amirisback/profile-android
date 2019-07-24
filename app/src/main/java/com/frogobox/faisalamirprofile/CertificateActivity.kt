@@ -9,6 +9,7 @@ import com.frogobox.faisalamirprofile.adapter.SocialMediaAdapter
 import com.frogobox.faisalamirprofile.model.Education
 import com.frogobox.faisalamirprofile.model.SocialMedia
 import kotlinx.android.synthetic.main.activity_certificate.*
+import kotlinx.android.synthetic.main.container_title.*
 
 class CertificateActivity : AppCompatActivity() {
 
@@ -16,6 +17,17 @@ class CertificateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_certificate)
 
+        initView()
+
+    }
+
+    private fun initView(){
+        tv_content_title.text = getString(R.string.title_education)
+        tv_content_subtitle.text = getString(R.string.subtitle_education)
+        initListView()
+    }
+
+    private fun initListView(){
         val arrayEducation : MutableList<Education> = mutableListOf()
 
         arrayEducation.add(Education(R.drawable.img_logo_smasa, getString(R.string.text_edu_high_school_level), getString(R.string.text_edu_high_school_institute), "", getString(R.string.text_edu_high_school_year)))
@@ -26,7 +38,6 @@ class CertificateActivity : AppCompatActivity() {
 
         rv_education.adapter = adapter
         rv_education.layoutManager = mLayoutManager
-
-
     }
+
 }
