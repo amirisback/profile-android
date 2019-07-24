@@ -31,6 +31,5 @@ class SocialMediaActivity : AppCompatActivity() {
         rv_social_media.adapter = adapter
         rv_social_media.layoutManager = mLayoutManager
 
-
     }
 }

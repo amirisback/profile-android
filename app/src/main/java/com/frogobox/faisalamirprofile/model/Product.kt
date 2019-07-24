@@ -5,7 +5,7 @@ package com.frogobox.faisalamirprofile.model
  * FrogoBox Inc License
  * =========================================
  * FaisalAmirProfile
- * Copyright (C) 15/07/2019.
+ * Copyright (C) 23/07/2019.
  * All rights reserved
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
@@ -17,10 +17,7 @@ package com.frogobox.faisalamirprofile.model
  * com.frogobox.faisalamirprofile.model
  *
  */
-data class Education(
-    val imageLogo: Int,
-    val level: String,
-    val institute: String,
-    val major: String,
-    val year: String
+data class Product(
+    val productName: String,
+    val productIcon: Int
 )

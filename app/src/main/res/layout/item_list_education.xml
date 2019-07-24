@@ -21,55 +21,71 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
+        android:layout_marginStart="@dimen/dimen_medium_8dp"
+        android:layout_marginEnd="@dimen/dimen_medium_8dp"
+        android:paddingTop="@dimen/dimen_medium_8dp"
+        android:paddingStart="@dimen/dimen_small_4dp"
+        android:paddingEnd="@dimen/dimen_small_4dp"
+        android:paddingBottom="@dimen/dimen_medium_8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-
     <LinearLayout
-            android:elevation="2dp"
             android:layout_marginTop="@dimen/dimen_big_ultra_32dp"
             android:background="@drawable/box_radius"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="220dp"
+            android:minWidth="220dp"
             android:layout_height="wrap_content">
 
         <TextView
                 android:layout_marginTop="58dp"
-                android:text="@string/text_edu_high_school"
+                android:maxLines="1"
+                tools:text="@string/text_edu_high_school_level"
                 android:layout_marginStart="@dimen/dimen_big_16dp"
                 android:layout_marginEnd="@dimen/dimen_big_16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3"/>
+                android:textSize="@dimen/text_size_small_10sp"
+                android:id="@+id/tv_edu_level"/>
 
         <TextView
                 android:layout_marginStart="@dimen/dimen_big_16dp"
                 android:layout_marginEnd="@dimen/dimen_big_16dp"
-                android:text="@string/text_edu_high_school_sman1"
+                tools:text="@string/text_edu_high_school_institute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size_title_medium_20sp"
-                android:id="@+id/textView4"/>
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/dimen_small_4dp"
+                android:layout_marginBottom="@dimen/dimen_small_4dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/text_size_medium_16sp"
+                android:id="@+id/tv_edu_institute"/>
 
         <TextView
+                android:id="@+id/tv_edu_major"
                 android:layout_marginStart="@dimen/dimen_big_16dp"
                 android:layout_marginEnd="@dimen/dimen_big_16dp"
-                android:text="Informatic Engineering"
+                tools:text="@string/text_dribbble"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size_small_10sp"
                 android:layout_marginBottom="@dimen/dimen_medium_8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
         <TextView
                 android:background="@drawable/box_radius_under"
-                android:text="@string/text_edu_high_school_year"
+                tools:text="@string/text_edu_high_school_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextWhite"
-                android:paddingTop="@dimen/dimen_small_4dp"
-                android:paddingBottom="4dp"
+                android:paddingTop="@dimen/dimen_medium_8dp"
+                android:paddingBottom="@dimen/dimen_medium_8dp"
                 android:paddingStart="@dimen/dimen_big_16dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_default_12sp"
                 android:paddingEnd="@dimen/dimen_big_16dp"
-                android:id="@+id/textView5"/>
+                android:id="@+id/tv_edu_year"/>
 
     </LinearLayout>
 
@@ -78,6 +94,7 @@
             android:layout_marginEnd="@dimen/dimen_big_16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:elevation="@dimen/dimen_medium_8dp"
             app:cardCornerRadius="@dimen/dimen_medium_8dp">
 
         <LinearLayout

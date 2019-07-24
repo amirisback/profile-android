@@ -20,9 +20,20 @@
     <string name="text_dribbble">Dribbble</string>
     <string name="text_medium">Medium</string>
 
-    <string name="text_edu_high_school">High School</string>
-    <string name="text_edu_high_school_sman1">SMAN 1 Probolinggo</string>
-    <string name="text_edu_high_school_year">2010 - 2013</string>
+    <string name="text_edu_high_school_level">High School</string>
+    <string name="text_edu_high_school_institute">SMAN 1 Probolinggo</string>
+    <string name="text_edu_high_school_year">2013 - 2016</string>
+
+    <string name="text_edu_diploma_level">Diploma</string>
+    <string name="text_edu_diploma_institute">Telkom University</string>
+    <string name="text_edu_diploma_major">Informatic Engineering</string>
+    <string name="text_edu_diploma_year">2016 - 2019</string>
+
+
+    <string name="title_social_media">Social Media</string>
+    <string name="subtitle_social_media">Follow my social media account</string>
+    <string name="title_education">Education</string>
+    <string name="subtitle_education">My background education</string>
 
 
 </resources>

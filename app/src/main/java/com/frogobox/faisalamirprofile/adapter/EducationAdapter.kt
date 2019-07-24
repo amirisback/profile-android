@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.model.SocialMedia
-import kotlinx.android.synthetic.main.item_list_social_media.view.*
+import com.frogobox.faisalamirprofile.model.Education
+import kotlinx.android.synthetic.main.item_list_education.view.*
 
 /**
  * Created by Faisal Amir
@@ -26,10 +26,10 @@ import kotlinx.android.synthetic.main.item_list_social_media.view.*
  * com.frogobox.faisalamirprofile.adapter
  *
  */
-data class SocialMediaAdapter (private val context: Context?, private val dataList: List<SocialMedia>) : RecyclerView.Adapter<SocialMediaAdapter.ViewHolder>() {
+data class EducationAdapter (private val context: Context?, private val dataList: List<Education>) : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_social_media, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_education, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(dataList[position])
@@ -39,12 +39,18 @@ data class SocialMediaAdapter (private val context: Context?, private val dataLi
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
-        private val imgIcon = view.img_icon
-        private val tvLink = view.tv_link
+        private val imgSchoolLogo = view.img_school_logo
+        private val tvEduInstitute = view.tv_edu_institute
+        private val tvEduLevel = view.tv_edu_level
+        private val tvEduMajor= view.tv_edu_major
+        private val tvEduYear = view.tv_edu_year
 
-        fun bindItem(data: SocialMedia) {
-            imgIcon.setImageResource(data.icon)
-            tvLink.text = data.link
+        fun bindItem(data: Education) {
+            imgSchoolLogo.setImageResource(data.imageLogo)
+            tvEduLevel.text = data.level
+            tvEduInstitute.text = data.institute
+            tvEduMajor.text = data.major
+            tvEduYear.text = data.year
         }
     }
 }

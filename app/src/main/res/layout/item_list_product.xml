@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by 
+ * FrogoBox Inc License
+ * =========================================
+ * 
+ * Copyright (C) .      
+ * All rights reserved
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * LinkedIn : linkedin.com/in/faisalamircs
+ * 
+ * FrogoBox Software Industries
+ * 
+ -->
+
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_margin="@dimen/dimen_medium_8dp"
+        app:cardCornerRadius="@dimen/dimen_big_16dp">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:textColor="@color/colorTextBlack"
+                android:gravity="center"
+                android:layout_margin="@dimen/dimen_big_16dp"
+                android:drawablePadding="@dimen/dimen_medium_8dp"
+                android:drawableStart="@drawable/ic_product_type_android"
+                android:text="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_default_12sp"
+                android:id="@+id/tv_product_name"/>
+
+        <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/dimens_img_product_150dp"
+                android:layout_height="@dimen/dimens_img_product_150dp"
+                android:src="@drawable/ic_product_finpro"
+                android:id="@+id/tv_product_icon"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
