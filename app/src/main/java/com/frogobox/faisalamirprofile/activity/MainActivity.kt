@@ -1,10 +1,11 @@
-package com.frogobox.faisalamirprofile
+package com.frogobox.faisalamirprofile.activity
 
 import android.content.Intent
 import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.helper.NFCUtil
 import kotlinx.android.synthetic.main.activity_main.*
 

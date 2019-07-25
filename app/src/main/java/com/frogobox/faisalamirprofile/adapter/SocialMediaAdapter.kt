@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.SocialMedia
-import kotlinx.android.synthetic.main.item_list_social_media.view.*
+import kotlinx.android.synthetic.main.item_social_media.view.*
 
 /**
  * Created by Faisal Amir
@@ -30,7 +30,7 @@ import kotlinx.android.synthetic.main.item_list_social_media.view.*
 class SocialMediaAdapter (private val context: Context?, private val dataList: List<SocialMedia>) : RecyclerView.Adapter<SocialMediaAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_social_media, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_social_media, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(dataList[position])

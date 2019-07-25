@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SkillActivity">
+        tools:context=".activity.SkillActivity">
 
     <LinearLayout
             android:orientation="vertical"
@@ -72,7 +72,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_product"
-                tools:listitem="@layout/item_list_product"
+                tools:listitem="@layout/item_product"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

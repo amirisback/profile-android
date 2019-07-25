@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.Education
-import kotlinx.android.synthetic.main.item_list_education.view.*
+import kotlinx.android.synthetic.main.item_education.view.*
 
 /**
  * Created by Faisal Amir
@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.item_list_education.view.*
 class EducationAdapter (private val context: Context?, private val dataList: List<Education>) : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_education, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_education, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(dataList[position])

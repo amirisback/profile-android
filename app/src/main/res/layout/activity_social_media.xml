@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".SocialMediaActivity">
+        tools:context=".activity.SocialMediaActivity">
 
     <include layout="@layout/container_title"/>
 
@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="8dp"
-            tools:listitem="@layout/item_list_social_media"
+            tools:listitem="@layout/item_social_media"
             android:id="@+id/rv_social_media"/>
 
 </LinearLayout>

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.frogobox.faisalamirprofile">
 
-    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.NFC"/>
 
     <application
             android:allowBackup="true"
@@ -11,30 +11,30 @@
             android:roundIcon="@drawable/ic_icon_amir"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".CertificateActivity">
+        <activity android:name=".activity.CertificateSetActivity">
         </activity>
-        <activity android:name=".SkillActivity">
+        <activity android:name=".activity.CertificateActivity">
         </activity>
-        <activity android:name=".SocialMediaActivity">
+        <activity android:name=".activity.SkillActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.SocialMediaActivity">
+        </activity>
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
             <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
 
                 <data
                         android:host="ext"
                         android:pathPrefix="/frogobox.com:faisalamir"
-                        android:scheme="vnd.android.nfc" />
+                        android:scheme="vnd.android.nfc"/>
             </intent-filter>
-
         </activity>
     </application>
 

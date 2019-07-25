@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.Product
-import kotlinx.android.synthetic.main.item_list_product.view.*
+import kotlinx.android.synthetic.main.item_product.view.*
 
 /**
  * Created by Faisal Amir
@@ -29,7 +29,7 @@ import kotlinx.android.synthetic.main.item_list_product.view.*
 class ProductAdapter (private val context: Context?, private val dataList: List<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_product, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_product, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(dataList[position])
