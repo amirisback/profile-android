@@ -25,7 +25,7 @@
             android:top="0dp"
             android:bottom="0dp">
         <shape android:shape="rectangle">
-            <solid android:color="#F44336"/>
+            <solid android:color="#4CAF50"/>
             <corners
                     android:radius="@dimen/dimen_medium_8dp"/>
         </shape>
