@@ -35,7 +35,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="@dimen/dimen_medium_8dp"
                 android:layout_marginStart="@dimen/dimen_big_16dp"
                 android:layout_marginEnd="@dimen/dimen_big_16dp"
                 android:layout_width="match_parent"

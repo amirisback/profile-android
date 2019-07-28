@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.helper.NFCUtil
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_optional.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_optional)
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this)
 
         fab_skill.setOnClickListener {

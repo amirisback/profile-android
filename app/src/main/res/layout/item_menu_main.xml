@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by 
+ * FrogoBox Inc License
+ * =========================================
+ * 
+ * Copyright (C) .      
+ * All rights reserved
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * LinkedIn : linkedin.com/in/faisalamircs
+ * 
+ * FrogoBox Software Industries
+ * 
+ -->
+
+<HorizontalScrollView
+        android:scrollbars="none"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_marginStart="@dimen/dimen_big_16dp"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_big_16dp"
+                android:background="@drawable/box_menu_organization"
+                android:minWidth="130dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                    android:layout_marginBottom="@dimen/dimen_medium_8dp"
+                    android:src="@drawable/ic_nav_organization"
+                    android:layout_width="@dimen/dimen_big_ultra_32dp"
+                    android:layout_height="@dimen/dimen_big_ultra_32dp"/>
+
+            <TextView
+                    android:text="Social Media"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginStart="@dimen/dimen_big_16dp"
+                android:layout_marginEnd="@dimen/dimen_big_16dp"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_big_16dp"
+                android:background="@drawable/box_menu_skill"
+                android:minWidth="130dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                    android:layout_marginBottom="@dimen/dimen_medium_8dp"
+                    android:src="@drawable/ic_nav_skill"
+                    android:layout_width="@dimen/dimen_big_ultra_32dp"
+                    android:layout_height="@dimen/dimen_big_ultra_32dp"/>
+
+            <TextView
+                    android:text="Skill and Product"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginEnd="@dimen/dimen_big_16dp"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_big_16dp"
+                android:background="@drawable/box_menu_certificate"
+                android:minWidth="130dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                    android:layout_marginBottom="@dimen/dimen_medium_8dp"
+                    android:src="@drawable/ic_nav_certificate"
+                    android:layout_width="@dimen/dimen_big_ultra_32dp"
+                    android:layout_height="@dimen/dimen_big_ultra_32dp"/>
+
+            <TextView
+                    android:text="Experience"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</HorizontalScrollView>
