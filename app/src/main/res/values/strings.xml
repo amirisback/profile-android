@@ -65,6 +65,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_product_release">Release</string>
     <string name="title_product_debug">Development</string>
+    <string name="title_social_organization">Organization</string>
 
 
 </resources>

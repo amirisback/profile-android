@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_social_media"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/dimen_big_16dp"
+    android:clipToPadding="false"
+    tools:context=".view.ui.fragment.SocialMediaFragment"
+    android:background="@color/colorBackgroundWhite"
+    tools:listitem="@layout/item_social_media" />

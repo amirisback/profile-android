@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.BaseFragment
-import com.frogobox.faisalamirprofile.view.ui.activity.SocialMediaActivity
+import com.frogobox.faisalamirprofile.view.ui.activity.SocialActivity
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
@@ -24,7 +24,7 @@ class ProfileFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fab_social_media.setOnClickListener {
-            baseStartActivity<SocialMediaActivity>()
+            baseStartActivity<SocialActivity>()
         }
     }
 

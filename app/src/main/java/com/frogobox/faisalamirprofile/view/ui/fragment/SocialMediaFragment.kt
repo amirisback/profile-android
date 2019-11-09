@@ -1,23 +1,34 @@
-package com.frogobox.faisalamirprofile.view.ui.activity
+package com.frogobox.faisalamirprofile.view.ui.fragment
+
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseActivity
+import com.frogobox.faisalamirprofile.base.BaseFragment
 import com.frogobox.faisalamirprofile.model.SocialMedia
 import com.frogobox.faisalamirprofile.view.adapter.SocialMediaAdapter
 import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
-import kotlinx.android.synthetic.main.activity_social_media.*
+import kotlinx.android.synthetic.main.fragment_social.*
 
-class SocialMediaActivity : BaseActivity(), BaseRecyclerViewListener<SocialMedia> {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_social_media)
-        setupDetailActivity("")
+class SocialMediaFragment : BaseFragment(), BaseRecyclerViewListener<SocialMedia> {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_social, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         initListView()
-
     }
 
     private fun initArrayModel(): MutableList<SocialMedia> {
@@ -78,10 +89,9 @@ class SocialMediaActivity : BaseActivity(), BaseRecyclerViewListener<SocialMedia
     private fun initListView() {
 
         val adapter = SocialMediaAdapter()
-        val mLayoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        val mLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
 
-
-        adapter.setRecyclerViewLayout(this, R.layout.item_social_media)
+        context?.let { adapter.setRecyclerViewLayout(it, R.layout.item_social_media) }
         adapter.setRecyclerViewListener(this)
         adapter.setRecyclerViewData(initArrayModel())
 
@@ -91,6 +101,5 @@ class SocialMediaActivity : BaseActivity(), BaseRecyclerViewListener<SocialMedia
 
     override fun onItemClicked(data: SocialMedia) {}
     override fun onItemLongClicked(data: SocialMedia) {}
-
 
 }
