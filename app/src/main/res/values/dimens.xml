@@ -43,7 +43,7 @@
     <dimen name="dimen_weight">0dp</dimen>
 
     <dimen name="dimen_circle_background">50dp</dimen>
-    <dimen name="dimen_profil_header">220dp</dimen>
+    <dimen name="dimen_profil_header">168dp</dimen>
     <dimen name="dimen_profil_photo">125dp</dimen>
     <dimen name="dimen_profil_photo_list">60dp</dimen>
     <dimen name="dimen_profil_photo_list_info">50dp</dimen>

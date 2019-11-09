@@ -2,10 +2,11 @@
 <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rv_product"
-    tools:listitem="@layout/item_product"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackgroundWhite"
+    android:clipToPadding="false"
     android:paddingTop="@dimen/dimen_medium_8dp"
     android:paddingRight="@dimen/dimen_big_16dp"
-    android:clipToPadding="false"
-    tools:context=".view.ui.fragment.ProductFragment"/>
+    tools:context=".view.ui.fragment.ProductFragment"
+    tools:listitem="@layout/item_product" />

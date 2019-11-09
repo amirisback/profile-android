@@ -4,6 +4,7 @@
     android:id="@+id/rv_education"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackgroundWhite"
     android:clipToPadding="false"
     android:paddingRight="@dimen/dimen_medium_8dp"
     tools:listitem="@layout/item_education" />
