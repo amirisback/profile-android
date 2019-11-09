@@ -1,13 +1,13 @@
-package com.frogobox.faisalamirprofile.activity
+package com.frogobox.faisalamirprofile.view.ui.activity
 
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.BaseActivity
-import com.frogobox.faisalamirprofile.fragment.AboutMeFragment
-import com.frogobox.faisalamirprofile.fragment.EducationFragment
-import com.frogobox.faisalamirprofile.fragment.ProductFragment
+import com.frogobox.faisalamirprofile.view.ui.fragment.AboutMeFragment
+import com.frogobox.faisalamirprofile.view.ui.fragment.EducationFragment
+import com.frogobox.faisalamirprofile.view.ui.fragment.ProductFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar_main.*
 
@@ -53,17 +53,23 @@ class MainActivity : BaseActivity() {
             when (it.itemId) {
                 R.id.bottom_menu_profile -> {
                     setupCustomTitleToolbar(R.string.title_about_me)
-                    setupChildFragment(frameLayout, AboutMeFragment())
+                    setupChildFragment(frameLayout,
+                        AboutMeFragment()
+                    )
                 }
 
                 R.id.bottom_menu_product -> {
                     setupCustomTitleToolbar(R.string.title_product)
-                    setupChildFragment(frameLayout, ProductFragment())
+                    setupChildFragment(frameLayout,
+                        ProductFragment()
+                    )
                 }
 
                 R.id.bottom_menu_education -> {
                     setupCustomTitleToolbar(R.string.title_education)
-                    setupChildFragment(frameLayout, EducationFragment())
+                    setupChildFragment(frameLayout,
+                        EducationFragment()
+                    )
                 }
             }
 

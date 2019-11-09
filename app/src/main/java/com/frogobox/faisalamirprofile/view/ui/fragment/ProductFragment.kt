@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.fragment
+package com.frogobox.faisalamirprofile.view.ui.fragment
 
 
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.adapter.ProductAdapter
+import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
 import com.frogobox.faisalamirprofile.base.BaseFragment
 import com.frogobox.faisalamirprofile.model.Product
 import kotlinx.android.synthetic.main.fragment_product.*

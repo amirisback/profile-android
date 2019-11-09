@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.SocialMediaActivity"></activity>
-        <activity android:name=".activity.AboutUsActivity"></activity>
+        <activity android:name="com.frogobox.faisalamirprofile.view.ui.activity.SocialMediaActivity"></activity>
+        <activity android:name="com.frogobox.faisalamirprofile.view.ui.activity.AboutUsActivity"></activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.frogobox.faisalamirprofile.view.ui.activity.MainActivity"
             android:theme="@style/AppThemeNoToolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

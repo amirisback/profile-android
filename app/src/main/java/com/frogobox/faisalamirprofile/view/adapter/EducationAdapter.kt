@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.adapter
+package com.frogobox.faisalamirprofile.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.item_education.view.*
  * LinkedIn : linkedin.com/in/faisalamircs
  * -----------------------------------------
  * FrogoBox Software Industries
- * com.frogobox.faisalamirprofile.adapter
+ * com.frogobox.faisalamirprofile.view.adapter
  *
  */
 class EducationAdapter (private val context: Context?, private val dataList: List<Education>) : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {

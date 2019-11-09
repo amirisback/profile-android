@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.fragment
+package com.frogobox.faisalamirprofile.view.ui.fragment
 
 
 import android.os.Bundle

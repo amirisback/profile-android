@@ -1,11 +1,11 @@
-package com.frogobox.faisalamirprofile.activity
+package com.frogobox.faisalamirprofile.view.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.adapter.SocialMediaAdapter
+import com.frogobox.faisalamirprofile.view.adapter.SocialMediaAdapter
 import com.frogobox.faisalamirprofile.model.SocialMedia
 import kotlinx.android.synthetic.main.activity_social_media.*
 

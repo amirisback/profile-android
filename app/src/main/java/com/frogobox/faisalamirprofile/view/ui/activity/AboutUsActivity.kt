@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.activity
+package com.frogobox.faisalamirprofile.view.ui.activity
 
 import android.os.Bundle
 import com.frogobox.faisalamirprofile.R

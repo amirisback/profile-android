@@ -5,4 +5,4 @@
     tools:listitem="@layout/item_product"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.ProductFragment"/>
+    tools:context=".view.ui.fragment.ProductFragment"/>
