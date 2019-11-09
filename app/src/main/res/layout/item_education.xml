@@ -17,96 +17,94 @@
  * 
  -->
 
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:layout_marginStart="@dimen/dimen_medium_8dp"
-        android:layout_marginEnd="@dimen/dimen_medium_8dp"
-        android:paddingTop="@dimen/dimen_medium_8dp"
-        android:paddingStart="@dimen/dimen_small_4dp"
-        android:paddingEnd="@dimen/dimen_small_4dp"
-        android:paddingBottom="@dimen/dimen_medium_8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_medium_8dp"
+    android:paddingStart="@dimen/dimen_small_4dp"
+    android:paddingTop="@dimen/dimen_medium_8dp"
+    android:paddingEnd="@dimen/dimen_small_4dp"
+    android:paddingBottom="@dimen/dimen_medium_8dp">
 
     <LinearLayout
-            android:layout_marginTop="@dimen/dimen_big_ultra_32dp"
-            android:background="@drawable/box_radius"
-            android:orientation="vertical"
-            android:layout_width="220dp"
-            android:minWidth="220dp"
-            android:layout_height="wrap_content">
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_big_ultra_32dp"
+        android:background="@drawable/box_radius"
+        android:minWidth="220dp"
+        android:orientation="vertical">
 
         <TextView
-                android:layout_marginTop="58dp"
-                android:maxLines="1"
-                tools:text="@string/text_edu_high_school_level"
-                android:layout_marginStart="@dimen/dimen_big_16dp"
-                android:layout_marginEnd="@dimen/dimen_big_16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_size_small_10sp"
-                android:id="@+id/tv_edu_level"/>
+            android:id="@+id/tv_edu_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_big_16dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="@dimen/dimen_big_16dp"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small_10sp"
+            tools:text="@string/text_edu_high_school_level" />
 
         <TextView
-                android:layout_marginStart="@dimen/dimen_big_16dp"
-                android:layout_marginEnd="@dimen/dimen_big_16dp"
-                tools:text="@string/text_edu_high_school_institute"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:layout_marginTop="@dimen/dimen_small_4dp"
-                android:layout_marginBottom="@dimen/dimen_small_4dp"
-                android:textColor="@color/colorTextBlack"
-                android:textSize="@dimen/text_size_medium_16sp"
-                android:id="@+id/tv_edu_institute"/>
+            android:id="@+id/tv_edu_institute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_big_16dp"
+            android:layout_marginTop="@dimen/dimen_small_4dp"
+            android:layout_marginEnd="@dimen/dimen_big_16dp"
+            android:layout_marginBottom="@dimen/dimen_small_4dp"
+            android:maxLines="1"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/text_size_medium_16sp"
+            tools:text="@string/text_edu_high_school_institute" />
 
         <TextView
-                android:id="@+id/tv_edu_major"
-                android:layout_marginStart="@dimen/dimen_big_16dp"
-                android:layout_marginEnd="@dimen/dimen_big_16dp"
-                tools:text="@string/text_dribbble"
-                android:maxLines="1"
-                android:textSize="@dimen/text_size_small_10sp"
-                android:layout_marginBottom="@dimen/dimen_medium_8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            android:id="@+id/tv_edu_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_big_16dp"
+            android:layout_marginEnd="@dimen/dimen_big_16dp"
+            android:layout_marginBottom="@dimen/dimen_medium_8dp"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small_10sp"
+            tools:text="@string/text_dribbble" />
 
         <TextView
-                android:background="@drawable/box_radius_under"
-                tools:text="@string/text_edu_high_school_year"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorTextWhite"
-                android:paddingTop="@dimen/dimen_medium_8dp"
-                android:paddingBottom="@dimen/dimen_medium_8dp"
-                android:paddingStart="@dimen/dimen_big_16dp"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_size_default_12sp"
-                android:paddingEnd="@dimen/dimen_big_16dp"
-                android:id="@+id/tv_edu_year"/>
+            android:id="@+id/tv_edu_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_radius_under"
+            android:paddingStart="@dimen/dimen_big_16dp"
+            android:paddingTop="@dimen/dimen_medium_8dp"
+            android:paddingEnd="@dimen/dimen_big_16dp"
+            android:paddingBottom="@dimen/dimen_medium_8dp"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/text_size_default_12sp"
+            android:textStyle="bold"
+            tools:text="@string/text_edu_high_school_year" />
 
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-            android:layout_marginStart="@dimen/dimen_big_16dp"
-            android:layout_marginEnd="@dimen/dimen_big_16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:elevation="@dimen/dimen_medium_8dp"
-            app:cardCornerRadius="@dimen/dimen_medium_8dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_big_16dp"
+        android:layout_marginEnd="@dimen/dimen_big_16dp"
+        app:cardCornerRadius="@dimen/dimen_medium_8dp"
+        app:elevation="@dimen/dimen_medium_8dp">
 
         <LinearLayout
-                android:layout_margin="@dimen/dimen_big_16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_big_16dp">
 
             <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    tools:srcCompat="@tools:sample/avatars"
-                    android:id="@+id/img_school_logo"/>
+                android:id="@+id/img_school_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                tools:srcCompat="@tools:sample/avatars" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
