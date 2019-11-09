@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/dimen_big_16dp"
     android:background="@color/colorBackgroundWhite"
-    tools:context=".view.ui.fragment.AboutMeFragment">
+    tools:context=".view.ui.fragment.ProfileFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="@dimen/dimen_big_16dp"
         android:id="@+id/iv_photo"
         android:layout_width="@dimen/dimen_profil_header"
         android:layout_height="@dimen/dimen_profil_header"
         android:layout_centerHorizontal="true"
-        app:civ_border_width="2dp"
+        android:src="@drawable/ic_photo_profile"
         app:civ_border_color="@color/colorPrimary"
-        android:src="@drawable/ic_photo_profile" />
+        app:civ_border_width="2dp" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/iv_photo"
-        android:textSize="@dimen/text_size_title_medium_20sp"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/dimen_big_16dp"
         android:layout_centerHorizontal="true"
-        android:text="@string/text_name" />
+        android:layout_marginTop="@dimen/dimen_big_16dp"
+        android:text="@string/text_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_title_medium_20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_job"
-        android:textSize="@dimen/text_size_medium_16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_name"
         android:layout_centerHorizontal="true"
-        android:text="@string/text_job" />
+        android:text="@string/text_job"
+        android:textSize="@dimen/text_size_medium_16sp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_social_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_big_16dp"
+        android:src="@drawable/ic_fab_social_organization" />
 
 </RelativeLayout>

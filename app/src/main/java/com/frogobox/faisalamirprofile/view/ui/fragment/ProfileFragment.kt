@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.BaseFragment
+import com.frogobox.faisalamirprofile.view.ui.activity.SocialMediaActivity
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 
-class AboutMeFragment : BaseFragment() {
+class ProfileFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -17,6 +19,13 @@ class AboutMeFragment : BaseFragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        fab_social_media.setOnClickListener {
+            baseStartActivity<SocialMediaActivity>()
+        }
     }
 
 

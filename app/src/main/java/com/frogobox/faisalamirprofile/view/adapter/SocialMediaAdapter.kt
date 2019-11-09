@@ -1,11 +1,8 @@
 package com.frogobox.faisalamirprofile.view.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.SocialMedia
 import com.frogobox.speechbooster.base.view.BaseRecyclerViewAdapter
 import com.frogobox.speechbooster.base.view.BaseRecyclerViewHolder
@@ -29,12 +26,19 @@ import kotlinx.android.synthetic.main.item_social_media.view.*
  *
  */
 
-class SocialMediaAdapter : BaseRecyclerViewAdapter<SocialMedia, SocialMediaAdapter.SocialMediaViewHolder>() {
+class SocialMediaAdapter :
+    BaseRecyclerViewAdapter<SocialMedia, SocialMediaAdapter.SocialMediaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        SocialMediaViewHolder(LayoutInflater.from(mContext).inflate(mRecyclerViewLayout, parent, false))
+        SocialMediaViewHolder(
+            LayoutInflater.from(mContext).inflate(
+                mRecyclerViewLayout,
+                parent,
+                false
+            )
+        )
 
-    inner class SocialMediaViewHolder(view: View) : BaseRecyclerViewHolder<SocialMedia>(view){
+    inner class SocialMediaViewHolder(view: View) : BaseRecyclerViewHolder<SocialMedia>(view) {
 
         private val imgIcon = view.img_icon
         private val tvLink = view.tv_link

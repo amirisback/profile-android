@@ -5,7 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.BaseActivity
-import com.frogobox.faisalamirprofile.view.ui.fragment.AboutMeFragment
+import com.frogobox.faisalamirprofile.view.ui.fragment.ProfileFragment
 import com.frogobox.faisalamirprofile.view.ui.fragment.EducationFragment
 import com.frogobox.faisalamirprofile.view.ui.fragment.ProductFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -55,7 +55,7 @@ class MainActivity : BaseActivity() {
                 R.id.bottom_menu_profile -> {
                     setupCustomTitleToolbar(R.string.title_about_me)
                     setupChildFragment(frameLayout,
-                        AboutMeFragment()
+                        ProfileFragment()
                     )
                 }
 

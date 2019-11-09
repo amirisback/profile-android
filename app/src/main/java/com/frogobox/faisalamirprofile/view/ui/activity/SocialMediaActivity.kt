@@ -15,7 +15,7 @@ class SocialMediaActivity : BaseActivity(), BaseRecyclerViewListener<SocialMedia
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social_media)
-
+        setupDetailActivity("")
         initListView()
 
     }
@@ -81,7 +81,7 @@ class SocialMediaActivity : BaseActivity(), BaseRecyclerViewListener<SocialMedia
         val mLayoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
 
-        adapter.setRecyclerViewLayout(this, R.layout.item_education)
+        adapter.setRecyclerViewLayout(this, R.layout.item_social_media)
         adapter.setRecyclerViewListener(this)
         adapter.setRecyclerViewData(initArrayModel())
 
