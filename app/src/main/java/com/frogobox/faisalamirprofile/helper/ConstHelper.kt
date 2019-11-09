@@ -139,6 +139,8 @@ class ConstHelper {
 
         const val SPLASH_INTERVAL = 1000
 
+        const val URI_PLAY_STORE = "https://play.google.com/store/apps/details?id="
+
     }
 
 }

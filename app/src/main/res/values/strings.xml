@@ -1,6 +1,7 @@
 <resources>
 
     <string name="about_frogobox">Frogobox Software Industry</string>
+    <string name="dummy">Frogobox Software Industry</string>
 
     <string name="text_name">Muhammad Faisal Amir</string>
     <string name="text_job">Android Programmer</string>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.BaseFragment
+import com.frogobox.faisalamirprofile.helper.ConstHelper.Const.URI_PLAY_STORE
 import com.frogobox.faisalamirprofile.model.Product
 import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
 import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
@@ -35,14 +36,16 @@ class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product>
             Product(
                 getString(R.string.product_name_mood),
                 R.drawable.ic_product_mood,
-                R.drawable.ic_product_type_release
+                R.drawable.ic_product_type_release,
+                "$URI_PLAY_STORE.com.frogobox.mood"
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_jagosholat),
                 R.drawable.ic_product_jagosholat,
-                R.drawable.ic_product_type_release
+                R.drawable.ic_product_type_release,
+                "$URI_PLAY_STORE.org.d3ifcool.jagosholat"
             )
         )
 
@@ -61,7 +64,9 @@ class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product>
 
     }
 
-    override fun onItemClicked(data: Product) {}
+    override fun onItemClicked(data: Product) {
+        data.productLink?.let { mActivity.baseStartExplicit(it) }
+    }
     override fun onItemLongClicked(data: Product) {}
 
 }

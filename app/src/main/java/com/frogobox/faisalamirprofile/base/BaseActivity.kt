@@ -2,6 +2,7 @@ package com.frogobox.faisalamirprofile.base
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.*
@@ -11,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.helper.ConstHelper
+
 
 /**
  * Created by Faisal Amir
@@ -78,6 +80,10 @@ open class BaseActivity : AppCompatActivity() {
 
     protected inline fun <reified ClassActivity> baseStartActivity() {
         this.startActivity(Intent(this, ClassActivity::class.java))
+    }
+
+    fun baseStartExplicit(uri: String) {
+        this.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
     }
 
     protected inline fun <reified ClassActivity, Model> baseStartActivity(

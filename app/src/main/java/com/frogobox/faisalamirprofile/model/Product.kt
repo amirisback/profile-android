@@ -20,5 +20,6 @@ package com.frogobox.faisalamirprofile.model
 data class Product(
     val productName: String,
     val productIcon: Int,
-    val productType: Int
+    val productType: Int,
+    val productLink: String?
 )
