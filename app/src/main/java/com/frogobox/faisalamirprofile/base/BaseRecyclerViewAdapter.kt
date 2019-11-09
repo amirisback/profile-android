@@ -20,20 +20,20 @@ import androidx.recyclerview.widget.RecyclerView
  * com.frogobox.speechbooster.base
  *
  */
-abstract class BaseViewAdapter<T, Holder : BaseViewHolder<T>> : RecyclerView.Adapter<Holder>() {
+abstract class BaseRecyclerViewAdapter<T, Holder : BaseRecyclerViewHolder<T>> : RecyclerView.Adapter<Holder>() {
 
     protected lateinit var mContext: Context
-    protected lateinit var mListener: BaseListener<T>
-
-    protected val mRecyclerViewDataList = mutableListOf<T>()
     protected var mRecyclerViewLayout: Int = 0
+
+    private lateinit var mListener: BaseRecyclerViewListener<T>
+    private val mRecyclerViewDataList = mutableListOf<T>()
 
     fun setRecyclerViewLayout(context: Context, layoutItem: Int) {
         mContext = context
         mRecyclerViewLayout = layoutItem
     }
 
-    fun setRecyclerViewListener(listener: BaseListener<T>) {
+    fun setRecyclerViewListener(listener: BaseRecyclerViewListener<T>) {
         mListener = listener
     }
 

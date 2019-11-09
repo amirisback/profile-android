@@ -5,16 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.GridLayoutManager
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
 import com.frogobox.faisalamirprofile.base.BaseFragment
 import com.frogobox.faisalamirprofile.model.Product
+import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
 import kotlinx.android.synthetic.main.fragment_product.*
 
 
-class ProductFragment : BaseFragment() {
+class ProductFragment : BaseFragment(), BaseRecyclerViewListener<Product> {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,75 +29,98 @@ class ProductFragment : BaseFragment() {
         initListView()
     }
 
-    private fun initListView(){
-        val arrayProduct : MutableList<Product> = mutableListOf()
+    private fun initArrayModel(): MutableList<Product> {
+
+        val arrayProduct: MutableList<Product> = mutableListOf()
 
         arrayProduct.add(
-            Product(getString(R.string.product_name_cat),
+            Product(
+                getString(R.string.product_name_cat),
                 R.drawable.ic_product_cat,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_finpro),
+            Product(
+                getString(R.string.product_name_finpro),
                 R.drawable.ic_product_finpro,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_football),
+            Product(
+                getString(R.string.product_name_football),
                 R.drawable.ic_product_football,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_frogonews),
+            Product(
+                getString(R.string.product_name_frogonews),
                 R.drawable.ic_product_frogonews,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_jagosholat),
+            Product(
+                getString(R.string.product_name_jagosholat),
                 R.drawable.ic_product_jagosholat,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_jami),
+            Product(
+                getString(R.string.product_name_jami),
                 R.drawable.ic_product_jami,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_movie),
+            Product(
+                getString(R.string.product_name_movie),
                 R.drawable.ic_product_movie,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_mood),
+            Product(
+                getString(R.string.product_name_mood),
                 R.drawable.ic_product_mood,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_romis),
+            Product(
+                getString(R.string.product_name_romis),
                 R.drawable.ic_product_romis,
                 R.drawable.ic_product_type_android
             )
         )
         arrayProduct.add(
-            Product(getString(R.string.product_name_shejek),
+            Product(
+                getString(R.string.product_name_shejek),
                 R.drawable.ic_product_shejek,
                 R.drawable.ic_product_type_android
             )
         )
 
-        val adapter = ProductAdapter(context, arrayProduct)
-        val mLayoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL ,false)
+        return arrayProduct
 
-        rv_product.adapter = adapter
-        rv_product.layoutManager = mLayoutManager
     }
+
+    private fun initListView() {
+
+        val adapter = ProductAdapter()
+        context?.let { adapter.setRecyclerViewLayout(it, R.layout.item_product) }
+        adapter.setRecyclerViewListener(this)
+        adapter.setRecyclerViewData(initArrayModel())
+        rv_product.adapter = adapter
+        rv_product.layoutManager = GridLayoutManager(context, 2)
+
+    }
+
+    override fun onItemClicked(data: Product) {}
+    override fun onItemLongClicked(data: Product) {}
+
 
 }

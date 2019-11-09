@@ -1,12 +1,11 @@
 package com.frogobox.faisalamirprofile.view.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.Product
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewAdapter
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewHolder
 import kotlinx.android.synthetic.main.item_product.view.*
 
 /**
@@ -26,23 +25,18 @@ import kotlinx.android.synthetic.main.item_product.view.*
  * com.frogobox.faisalamirprofile.view.adapter
  *
  */
-class ProductAdapter (private val context: Context?, private val dataList: List<Product>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class ProductAdapter : BaseRecyclerViewAdapter<Product, ProductAdapter.ProductViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_product, parent, false))
+        ProductViewHolder(LayoutInflater.from(mContext).inflate(mRecyclerViewLayout, parent, false))
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(dataList[position])
-    }
-
-    override fun getItemCount(): Int = dataList.size
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    inner class ProductViewHolder(view: View) : BaseRecyclerViewHolder<Product>(view) {
 
         private val imgProductIcon = view.img_product_icon
         private val tvProductName = view.tv_product_name
 
-        fun bindItem(data: Product) {
+        override fun initComponent(data: Product) {
+            super.initComponent(data)
             imgProductIcon.setImageResource(data.productIcon)
             tvProductName.text = data.productName
             tvProductName.setCompoundDrawablesWithIntrinsicBounds(data.productType, 0, 0, 0);

@@ -17,7 +17,7 @@ package com.frogobox.speechbooster.base.view
  * com.frogobox.speechbooster.base
  *
  */
-interface BaseListener<T> {
+interface BaseRecyclerViewListener<T> {
     fun onItemClicked(data: T)
     fun onItemLongClicked(data: T)
 }

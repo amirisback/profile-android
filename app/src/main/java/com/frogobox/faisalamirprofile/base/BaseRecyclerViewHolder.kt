@@ -21,14 +21,14 @@ import androidx.recyclerview.widget.RecyclerView
  *
  */
 
-abstract class BaseViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
+abstract class BaseRecyclerViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
 
-    open fun bindItem(data: T, listener: BaseListener<T>){
+    open fun bindItem(data: T, listener: BaseRecyclerViewListener<T>){
         onItemViewClicked(data, listener)
         initComponent(data)
     }
 
-    protected fun onItemViewClicked(data: T, listener: BaseListener<T>){
+    private fun onItemViewClicked(data: T, listener: BaseRecyclerViewListener<T>){
         itemView.setOnClickListener {
             listener.onItemClicked(data)
         }

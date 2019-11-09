@@ -1,12 +1,11 @@
 package com.frogobox.faisalamirprofile.view.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.Education
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewAdapter
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewHolder
 import kotlinx.android.synthetic.main.item_education.view.*
 
 /**
@@ -26,26 +25,27 @@ import kotlinx.android.synthetic.main.item_education.view.*
  * com.frogobox.faisalamirprofile.view.adapter
  *
  */
-class EducationAdapter (private val context: Context?, private val dataList: List<Education>) : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
+class EducationAdapter : BaseRecyclerViewAdapter<Education, EducationAdapter.EducationViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_education, parent, false))
+        EducationViewHolder(
+            LayoutInflater.from(mContext).inflate(
+                mRecyclerViewLayout,
+                parent,
+                false
+            )
+        )
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(dataList[position])
-    }
-
-    override fun getItemCount(): Int = dataList.size
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    inner class EducationViewHolder(view: View) : BaseRecyclerViewHolder<Education>(view) {
 
         private val imgSchoolLogo = view.img_school_logo
         private val tvEduInstitute = view.tv_edu_institute
         private val tvEduLevel = view.tv_edu_level
-        private val tvEduMajor= view.tv_edu_major
+        private val tvEduMajor = view.tv_edu_major
         private val tvEduYear = view.tv_edu_year
 
-        fun bindItem(data: Education) {
+        override fun initComponent(data: Education) {
+            super.initComponent(data)
             imgSchoolLogo.setImageResource(data.imageLogo)
             tvEduLevel.text = data.level
             tvEduInstitute.text = data.institute

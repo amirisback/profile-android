@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.model.SocialMedia
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewAdapter
+import com.frogobox.speechbooster.base.view.BaseRecyclerViewHolder
 import kotlinx.android.synthetic.main.item_social_media.view.*
 
 /**
@@ -27,23 +29,18 @@ import kotlinx.android.synthetic.main.item_social_media.view.*
  *
  */
 
-class SocialMediaAdapter (private val context: Context?, private val dataList: List<SocialMedia>) : RecyclerView.Adapter<SocialMediaAdapter.ViewHolder>() {
+class SocialMediaAdapter : BaseRecyclerViewAdapter<SocialMedia, SocialMediaAdapter.SocialMediaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_social_media, parent, false))
+        SocialMediaViewHolder(LayoutInflater.from(mContext).inflate(mRecyclerViewLayout, parent, false))
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItem(dataList[position])
-    }
-
-    override fun getItemCount(): Int = dataList.size
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    inner class SocialMediaViewHolder(view: View) : BaseRecyclerViewHolder<SocialMedia>(view){
 
         private val imgIcon = view.img_icon
         private val tvLink = view.tv_link
 
-        fun bindItem(data: SocialMedia) {
+        override fun initComponent(data: SocialMedia) {
+            super.initComponent(data)
             imgIcon.setImageResource(data.icon)
             tvLink.text = data.link
         }
