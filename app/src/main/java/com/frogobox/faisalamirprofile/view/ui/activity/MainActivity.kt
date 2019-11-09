@@ -48,6 +48,7 @@ class MainActivity : BaseActivity() {
 
     private fun setupBottomNav(frameLayout: Int) {
         bottom_nav_main_menu.clearAnimation()
+        bottom_nav_main_menu.itemIconTintList = null
         bottom_nav_main_menu.setOnNavigationItemSelectedListener {
 
             when (it.itemId) {

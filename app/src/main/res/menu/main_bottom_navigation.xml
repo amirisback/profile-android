@@ -22,19 +22,19 @@
 
     <item
             android:id="@+id/bottom_menu_profile"
-            android:icon="@drawable/ic_nav_skill"
+            android:icon="@drawable/ic_bottom_nav_about_me"
             android:title="@string/title_about_me"
             app:showAsAction="ifRoom"/>
 
     <item
             android:id="@+id/bottom_menu_product"
-            android:icon="@drawable/ic_nav_organization"
+            android:icon="@drawable/ic_bottom_nav_product"
             android:title="@string/title_product"
             app:showAsAction="ifRoom"/>
 
     <item
             android:id="@+id/bottom_menu_education"
-            android:icon="@drawable/ic_nav_certificate"
+            android:icon="@drawable/ic_bottom_nav_education"
             android:title="@string/title_education"
             app:showAsAction="ifRoom"/>
 

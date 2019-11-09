@@ -35,42 +35,42 @@ class ProductDebugFragment : BaseFragment(), BaseRecyclerViewListener<Product> {
             Product(
                 getString(R.string.product_name_cat),
                 R.drawable.ic_product_cat,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_finpro),
                 R.drawable.ic_product_finpro,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_football),
                 R.drawable.ic_product_football,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_frogonews),
                 R.drawable.ic_product_frogonews,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_jami),
                 R.drawable.ic_product_jami,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_movie),
                 R.drawable.ic_product_movie,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
 
@@ -78,14 +78,14 @@ class ProductDebugFragment : BaseFragment(), BaseRecyclerViewListener<Product> {
             Product(
                 getString(R.string.product_name_romis),
                 R.drawable.ic_product_romis,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_shejek),
                 R.drawable.ic_product_shejek,
-                R.drawable.ic_product_type_android
+                R.drawable.ic_product_type_debug
             )
         )
 

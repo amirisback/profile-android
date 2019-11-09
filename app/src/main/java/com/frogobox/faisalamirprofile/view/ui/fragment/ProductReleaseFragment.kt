@@ -35,14 +35,14 @@ class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product>
             Product(
                 getString(R.string.product_name_mood),
                 R.drawable.ic_product_mood,
-                R.drawable.img_logo_playstore
+                R.drawable.ic_product_type_release
             )
         )
         arrayProduct.add(
             Product(
                 getString(R.string.product_name_jagosholat),
                 R.drawable.ic_product_jagosholat,
-                R.drawable.img_logo_playstore
+                R.drawable.ic_product_type_release
             )
         )
 
