@@ -67,5 +67,10 @@
     <string name="title_product_debug">Development</string>
     <string name="title_social_organization">Organization</string>
 
+    <string name="title_org_himadif">HIMADIF TEL-U</string>
+    <string name="title_org_uxid">UXID Bandung</string>
+    <string name="title_org_ypgeek">Young Probolinggo Geek</string>
+    <string name="title_org_protect">PROTECT Community</string>
+
 
 </resources>

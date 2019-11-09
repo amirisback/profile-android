@@ -34,7 +34,7 @@ class EducationFragment : BaseFragment(), BaseRecyclerViewListener<Education> {
 
         arrayEducation.add(
             Education(
-                R.drawable.img_logo_smasa,
+                R.drawable.img_logo_edu_smasa,
                 getString(R.string.text_edu_high_school_level),
                 getString(
                     R.string.text_edu_high_school_institute
@@ -45,7 +45,7 @@ class EducationFragment : BaseFragment(), BaseRecyclerViewListener<Education> {
         )
         arrayEducation.add(
             Education(
-                R.drawable.img_logo_telu,
+                R.drawable.img_logo_edu_telu,
                 getString(R.string.text_edu_diploma_level),
                 getString(
                     R.string.text_edu_diploma_institute
