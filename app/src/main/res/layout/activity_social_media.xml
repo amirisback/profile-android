@@ -8,8 +8,6 @@
         android:orientation="vertical"
         tools:context=".activity.SocialMediaActivity">
 
-    <include layout="@layout/container_title"/>
-
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

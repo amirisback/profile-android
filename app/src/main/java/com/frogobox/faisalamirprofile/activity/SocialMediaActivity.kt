@@ -8,7 +8,6 @@ import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.adapter.SocialMediaAdapter
 import com.frogobox.faisalamirprofile.model.SocialMedia
 import kotlinx.android.synthetic.main.activity_social_media.*
-import kotlinx.android.synthetic.main.container_title.*
 
 class SocialMediaActivity : AppCompatActivity() {
 
@@ -16,15 +15,10 @@ class SocialMediaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social_media)
 
-        initView()
-
-    }
-
-    private fun initView(){
-        tv_content_title.text = getString(R.string.title_social_media)
-        tv_content_subtitle.text = getString(R.string.subtitle_social_media)
         initListView()
+
     }
+
 
     private fun initListView(){
         val arraySocialMedia : MutableList<SocialMedia> = mutableListOf()

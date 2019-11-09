@@ -1,9 +1,9 @@
 <resources>
 
+    <string name="about_frogobox">Frogobox Software Industry</string>
+
     <string name="text_name">Muhammad Faisal Amir</string>
     <string name="text_job">Android Programmer</string>
-
-
     <string name="text_link_linkedin">linkedin.com/in/faisalamircs</string>
     <string name="text_link_github">github.com/amirisback</string>
     <string name="text_link_medium">medium.com/@faisalamircs</string>

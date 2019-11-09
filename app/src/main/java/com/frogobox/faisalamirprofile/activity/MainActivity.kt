@@ -39,7 +39,7 @@ class MainActivity : BaseActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.toolbar_menu_about -> {
-//                baseStartActivity<AboutUsActivity>()
+                baseStartActivity<AboutUsActivity>()
                 true
             }
             else -> super.onOptionsItemSelected(item)
