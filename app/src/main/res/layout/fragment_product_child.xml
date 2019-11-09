@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_product"
+    tools:listitem="@layout/item_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_medium_8dp"
+    android:paddingRight="@dimen/dimen_big_16dp"
+    android:clipToPadding="false"
+    tools:context=".view.ui.fragment.ProductFragment"/>
