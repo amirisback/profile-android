@@ -3,6 +3,7 @@
     <string name="text_name">Muhammad Faisal Amir</string>
     <string name="text_job">Android Programmer</string>
 
+
     <string name="text_link_linkedin">linkedin.com/in/faisalamircs</string>
     <string name="text_link_github">github.com/amirisback</string>
     <string name="text_link_medium">medium.com/@faisalamircs</string>
@@ -48,6 +49,7 @@
     <string name="title_skill">Skill</string>
     <string name="title_product">Product</string>
     <string name="title_title">Title</string>
+    <string name="title_about_us">toolbar_about_us</string>
 
     <string name="subtitle_subtitle">Subtitle</string>
     <string name="subtitle_social_media">Follow my social media account</string>
@@ -57,6 +59,9 @@
 
     <string name="text_android">Android</string>
     <string name="title_about_me">About Me</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -23,7 +23,7 @@ import androidx.fragment.app.Fragment
  * com.frogobox.faisalamirprofile.base
  *
  */
-class BaseFragment : Fragment() {
+open class BaseFragment : Fragment() {
 
     lateinit var mActivity: BaseActivity
 
