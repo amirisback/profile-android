@@ -1,38 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.frogobox.faisalamirprofile">
+    package="com.frogobox.faisalamirprofile">
 
     <application
-            android:allowBackup="true"
-            android:icon="@drawable/ic_icon_amir"
-            android:label="@string/app_name"
-            android:roundIcon="@drawable/ic_icon_amir"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        <activity android:name=".activity.CertificateSetActivity">
-        </activity>
-        <activity android:name=".activity.CertificateActivity">
-        </activity>
-        <activity android:name=".activity.SkillActivity">
-        </activity>
-        <activity android:name=".activity.SocialMediaActivity">
-        </activity>
-        <activity android:name=".activity.MainActivity"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon_amir"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_icon_amir"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.SocialMediaActivity"></activity>
+        <activity
+            android:name=".activity.MainActivity"
             android:theme="@style/AppThemeNoToolbar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-
-                <data
-                        android:host="ext"
-                        android:pathPrefix="/frogobox.com:faisalamir"
-                        android:scheme="vnd.android.nfc"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
