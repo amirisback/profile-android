@@ -34,31 +34,5 @@
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="@+id/iv_photo" app:layout_constraintStart_toStartOf="@+id/iv_photo"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/iv_photo"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true" app:srcCompat="@drawable/ic_nav_skill"
-            android:id="@+id/fab_skill"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="32dp" android:focusable="true"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true" app:srcCompat="@drawable/ic_nav_certificate"
-            android:id="@+id/fab_certificate"
-            app:layout_constraintTop_toTopOf="@+id/fab_skill"
-            app:layout_constraintBottom_toBottomOf="@+id/fab_skill"
-            app:layout_constraintStart_toEndOf="@+id/fab_skill" android:layout_marginStart="16dp"
-            android:focusable="true"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true" app:srcCompat="@drawable/ic_nav_organization"
-            android:id="@+id/fab_social_media"
-            app:layout_constraintTop_toTopOf="@+id/fab_skill"
-            app:layout_constraintBottom_toBottomOf="@+id/fab_skill"
-            app:layout_constraintEnd_toStartOf="@+id/fab_skill" android:layout_marginEnd="16dp"
-            android:focusable="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

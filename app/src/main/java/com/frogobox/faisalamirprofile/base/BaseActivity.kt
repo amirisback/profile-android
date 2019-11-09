@@ -59,6 +59,6 @@ import java.util.function.Consumer
  *
  */
 
-class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
 
 }
