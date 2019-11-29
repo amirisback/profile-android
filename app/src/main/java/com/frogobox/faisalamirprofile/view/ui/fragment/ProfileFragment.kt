@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseFragment
+import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.view.ui.activity.SocialActivity
 import kotlinx.android.synthetic.main.fragment_profile.*
 

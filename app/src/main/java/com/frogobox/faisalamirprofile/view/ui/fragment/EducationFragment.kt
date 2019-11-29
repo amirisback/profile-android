@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseFragment
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewListener
+import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.Education
 import com.frogobox.faisalamirprofile.view.adapter.EducationAdapter
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
 import kotlinx.android.synthetic.main.fragment_education.*
 
 
-class EducationFragment : BaseFragment(), BaseRecyclerViewListener<Education> {
+class EducationFragment : BaseFragment(), BaseViewListener<Education> {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,9 +63,7 @@ class EducationFragment : BaseFragment(), BaseRecyclerViewListener<Education> {
         val adapter = EducationAdapter()
         val mLayoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
 
-        context?.let { adapter.setRecyclerViewLayout(it, R.layout.item_education) }
-        adapter.setRecyclerViewListener(this)
-        adapter.setRecyclerViewData(initArrayModel())
+        adapter.setupRequirement(this, initArrayModel(), R.layout.item_education)
 
         rv_education.adapter = adapter
         rv_education.layoutManager = mLayoutManager

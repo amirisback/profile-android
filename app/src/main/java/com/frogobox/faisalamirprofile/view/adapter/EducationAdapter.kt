@@ -1,11 +1,10 @@
 package com.frogobox.faisalamirprofile.view.adapter
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewAdapter
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewHolder
 import com.frogobox.faisalamirprofile.model.Education
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewAdapter
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewHolder
 import kotlinx.android.synthetic.main.item_education.view.*
 
 /**
@@ -25,18 +24,9 @@ import kotlinx.android.synthetic.main.item_education.view.*
  * com.frogobox.faisalamirprofile.view.adapter
  *
  */
-class EducationAdapter : BaseRecyclerViewAdapter<Education, EducationAdapter.EducationViewHolder>() {
+class EducationAdapter : BaseViewAdapter<Education>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        EducationViewHolder(
-            LayoutInflater.from(mContext).inflate(
-                mRecyclerViewLayout,
-                parent,
-                false
-            )
-        )
-
-    inner class EducationViewHolder(view: View) : BaseRecyclerViewHolder<Education>(view) {
+    inner class EducationViewHolder(view: View) : BaseViewHolder<Education>(view) {
 
         private val imgSchoolLogo = view.img_school_logo
         private val tvEduInstitute = view.tv_edu_institute
@@ -52,5 +42,9 @@ class EducationAdapter : BaseRecyclerViewAdapter<Education, EducationAdapter.Edu
             tvEduMajor.text = data.major
             tvEduYear.text = data.year
         }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Education> {
+        return EducationViewHolder(viewLayout(parent))
     }
 }

@@ -1,11 +1,10 @@
 package com.frogobox.faisalamirprofile.view.adapter
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewAdapter
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewHolder
 import com.frogobox.faisalamirprofile.model.Product
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewAdapter
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewHolder
 import kotlinx.android.synthetic.main.item_product.view.*
 
 /**
@@ -25,12 +24,9 @@ import kotlinx.android.synthetic.main.item_product.view.*
  * com.frogobox.faisalamirprofile.view.adapter
  *
  */
-class ProductAdapter : BaseRecyclerViewAdapter<Product, ProductAdapter.ProductViewHolder>() {
+class ProductAdapter : BaseViewAdapter<Product>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ProductViewHolder(LayoutInflater.from(mContext).inflate(mRecyclerViewLayout, parent, false))
-
-    inner class ProductViewHolder(view: View) : BaseRecyclerViewHolder<Product>(view) {
+    inner class ProductViewHolder(view: View) : BaseViewHolder<Product>(view) {
 
         private val imgProductIcon = view.img_product_icon
         private val tvProductName = view.tv_product_name
@@ -41,5 +37,9 @@ class ProductAdapter : BaseRecyclerViewAdapter<Product, ProductAdapter.ProductVi
             tvProductName.text = data.productName
             tvProductName.setCompoundDrawablesWithIntrinsicBounds(data.productType, 0, 0, 0);
         }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Product> {
+        return ProductViewHolder(viewLayout(parent))
     }
 }

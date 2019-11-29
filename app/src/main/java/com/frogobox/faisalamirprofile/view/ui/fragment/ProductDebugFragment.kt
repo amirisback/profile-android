@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseFragment
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewListener
+import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.Product
 import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
 import kotlinx.android.synthetic.main.fragment_product_child.*
 
-class ProductDebugFragment : BaseFragment(), BaseRecyclerViewListener<Product> {
+class ProductDebugFragment : BaseFragment(), BaseViewListener<Product> {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -105,9 +105,7 @@ class ProductDebugFragment : BaseFragment(), BaseRecyclerViewListener<Product> {
     private fun initListView() {
 
         val adapter = ProductAdapter()
-        context?.let { adapter.setRecyclerViewLayout(it, R.layout.item_product) }
-        adapter.setRecyclerViewListener(this)
-        adapter.setRecyclerViewData(initArrayModel())
+        adapter.setupRequirement(this, initArrayModel(), R.layout.item_product)
         rv_product.adapter = adapter
         rv_product.layoutManager = GridLayoutManager(context, 2)
 

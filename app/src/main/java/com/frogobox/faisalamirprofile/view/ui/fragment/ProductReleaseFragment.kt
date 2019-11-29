@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseFragment
-import com.frogobox.faisalamirprofile.helper.ConstHelper.Const.URI_PLAY_STORE
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewListener
+import com.frogobox.faisalamirprofile.base.ui.BaseFragment
+import com.frogobox.faisalamirprofile.helper.ConstHelper.Link.PACKAGE_JAGO_SHOLAT
+import com.frogobox.faisalamirprofile.helper.ConstHelper.Link.PACKAGE_MOOD
+import com.frogobox.faisalamirprofile.helper.ConstHelper.Link.URI_PLAY_STORE
 import com.frogobox.faisalamirprofile.model.Product
 import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
 import kotlinx.android.synthetic.main.fragment_product_child.*
 
-class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product> {
+class ProductReleaseFragment : BaseFragment(), BaseViewListener<Product> {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +39,7 @@ class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product>
                 getString(R.string.product_name_mood),
                 R.drawable.ic_product_mood,
                 R.drawable.ic_product_type_release,
-                "$URI_PLAY_STORE.com.frogobox.mood"
+                 "$URI_PLAY_STORE$PACKAGE_MOOD"
             )
         )
         arrayProduct.add(
@@ -45,7 +47,7 @@ class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product>
                 getString(R.string.product_name_jagosholat),
                 R.drawable.ic_product_jagosholat,
                 R.drawable.ic_product_type_release,
-                "$URI_PLAY_STORE.org.d3ifcool.jagosholat"
+                "$URI_PLAY_STORE$PACKAGE_JAGO_SHOLAT"
             )
         )
 
@@ -56,9 +58,7 @@ class ProductReleaseFragment : BaseFragment(), BaseRecyclerViewListener<Product>
     private fun initListView() {
 
         val adapter = ProductAdapter()
-        context?.let { adapter.setRecyclerViewLayout(it, R.layout.item_product) }
-        adapter.setRecyclerViewListener(this)
-        adapter.setRecyclerViewData(initArrayModel())
+        adapter.setupRequirement(this, initArrayModel(), R.layout.item_product)
         rv_product.adapter = adapter
         rv_product.layoutManager = GridLayoutManager(context, 2)
 

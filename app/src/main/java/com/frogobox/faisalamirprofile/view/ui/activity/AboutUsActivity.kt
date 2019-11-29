@@ -2,7 +2,7 @@ package com.frogobox.faisalamirprofile.view.ui.activity
 
 import android.os.Bundle
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseActivity
+import com.frogobox.faisalamirprofile.base.ui.BaseActivity
 
 class AboutUsActivity : BaseActivity() {
 

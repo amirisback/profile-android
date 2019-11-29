@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.BaseFragment
+import com.frogobox.faisalamirprofile.base.adapter.BaseViewListener
+import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.SocialMedia
 import com.frogobox.faisalamirprofile.view.adapter.SocialMediaAdapter
-import com.frogobox.speechbooster.base.view.BaseRecyclerViewListener
 import kotlinx.android.synthetic.main.fragment_social.*
 
-class SocialOrganizationFragment : BaseFragment(), BaseRecyclerViewListener<SocialMedia> {
+class SocialOrganizationFragment : BaseFragment(), BaseViewListener<SocialMedia> {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,16 +63,10 @@ class SocialOrganizationFragment : BaseFragment(), BaseRecyclerViewListener<Soci
     }
 
     private fun initListView() {
-
         val adapter = SocialMediaAdapter()
-        val mLayoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-
-        context?.let { adapter.setRecyclerViewLayout(it, R.layout.item_social_media) }
-        adapter.setRecyclerViewListener(this)
-        adapter.setRecyclerViewData(initArrayModel())
-
+        adapter.setupRequirement(this, initArrayModel(), R.layout.item_social_media)
         rv_social_media.adapter = adapter
-        rv_social_media.layoutManager = mLayoutManager
+        rv_social_media.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
     }
 
     override fun onItemClicked(data: SocialMedia) {}
