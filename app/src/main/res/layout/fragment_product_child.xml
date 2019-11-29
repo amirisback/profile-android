@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundWhite"
     android:clipToPadding="false"
-    android:paddingTop="@dimen/dimen_medium_8dp"
+    android:paddingTop="@dimen/dimen_big_16dp"
     android:paddingRight="@dimen/dimen_big_16dp"
     tools:context=".view.ui.fragment.ProductFragment"
     tools:listitem="@layout/item_product" />
