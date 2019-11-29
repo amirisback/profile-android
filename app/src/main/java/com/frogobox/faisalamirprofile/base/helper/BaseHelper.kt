@@ -1,11 +1,13 @@
-package com.frogobox.speechbooster.base.view
+package com.frogobox.faisalamirprofile.base.helper
+
+import com.google.gson.Gson
 
 /**
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
  * SpeechBooster
- * Copyright (C) 18/08/2019.
+ * Copyright (C) 14/09/2019.
  * All rights reserved
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
@@ -17,7 +19,14 @@ package com.frogobox.speechbooster.base.view
  * com.frogobox.speechbooster.base
  *
  */
-interface BaseRecyclerViewListener<T> {
-    fun onItemClicked(data: T)
-    fun onItemLongClicked(data: T)
+open class BaseHelper {
+
+    fun <T> baseToJson(model: T) : String? {
+        return Gson().toJson(model)
+    }
+
+    inline fun <reified T> baseFromJson(word: String?) : T {
+        return Gson().fromJson<T>(word, T::class.java)
+    }
+
 }

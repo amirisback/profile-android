@@ -1,4 +1,4 @@
-package com.frogobox.speechbooster.base.view
+package com.frogobox.faisalamirprofile.base.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -21,20 +21,25 @@ import androidx.recyclerview.widget.RecyclerView
  *
  */
 
-abstract class BaseRecyclerViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
+open class BaseViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
 
-    open fun bindItem(data: T, listener: BaseRecyclerViewListener<T>){
-        onItemViewClicked(data, listener)
+    fun bindItem(data: T, viewListener: BaseViewListener<T>) {
+        onItemViewClicked(data, viewListener)
         initComponent(data)
     }
 
-    private fun onItemViewClicked(data: T, listener: BaseRecyclerViewListener<T>){
+    private fun onItemViewClicked(data: T, viewListener: BaseViewListener<T>) {
         itemView.setOnClickListener {
-            listener.onItemClicked(data)
+            viewListener.onItemClicked(data)
+        }
+
+        itemView.setOnLongClickListener {
+            viewListener.onItemLongClicked(data)
+            true
         }
     }
 
-    open fun initComponent(data: T){
+    open fun initComponent(data: T) {
         // component view
     }
 

@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.base
+package com.frogobox.faisalamirprofile.base.ui
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.frogobox.faisalamirprofile.R
+import com.frogobox.faisalamirprofile.base.helper.BaseHelper
 import com.frogobox.faisalamirprofile.helper.ConstHelper
 
 

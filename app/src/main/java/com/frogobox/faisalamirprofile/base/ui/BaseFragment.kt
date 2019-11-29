@@ -1,10 +1,11 @@
-package com.frogobox.faisalamirprofile.base
+package com.frogobox.faisalamirprofile.base.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.frogobox.faisalamirprofile.base.helper.BaseHelper
 
 /**
  * Created by Faisal Amir
@@ -49,7 +50,8 @@ open class BaseFragment : Fragment() {
 
     protected inline fun <reified Model> baseGetInstance(argsKey: String): Model {
         val argsData = this.arguments?.getString(argsKey)
-        val instaceData = BaseHelper().baseFromJson<Model>(argsData)
+        val instaceData = BaseHelper()
+            .baseFromJson<Model>(argsData)
         return instaceData
     }
 
