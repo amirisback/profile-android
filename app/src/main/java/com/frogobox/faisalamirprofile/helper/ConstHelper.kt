@@ -128,6 +128,21 @@ class ConstHelper {
 
     }
 
+    object Link{
+        const val URI_PLAY_STORE = "https://play.google.com/store/apps/details?id="
+        const val PACKAGE_JAGO_SHOLAT = "org.d3ifcool.jagosholat"
+
+        const val BASE_PACKAGE = "com.frogobox"
+        const val PACKAGE_MOOD = "$BASE_PACKAGE.mood"
+        const val PACKAGE_SPEECH_BOOSTER = "$BASE_PACKAGE.mood"
+        const val PACKAGE_INTELLIGENT_CLEANER = "$BASE_PACKAGE.mood"
+        const val PACKAGE_PIANO_K3 = "$BASE_PACKAGE.mood"
+        const val PACKAGE_AYO_MENGHITUNG = "$BASE_PACKAGE.mood"
+        const val PACKAGE_DICTIONARY_BOX = "$BASE_PACKAGE.mood"
+
+
+    }
+
     object Const {
 
         const val OPTION_GET = "OPTION_GET"
@@ -138,8 +153,6 @@ class ConstHelper {
         const val FRAGMENT_DIALOG = "dialog"
 
         const val SPLASH_INTERVAL = 1000
-
-        const val URI_PLAY_STORE = "https://play.google.com/store/apps/details?id="
 
     }
 
