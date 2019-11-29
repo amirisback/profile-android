@@ -130,16 +130,17 @@ class ConstHelper {
 
     object Link{
         const val URI_PLAY_STORE = "https://play.google.com/store/apps/details?id="
+
         const val PACKAGE_JAGO_SHOLAT = "org.d3ifcool.jagosholat"
 
         const val BASE_PACKAGE = "com.frogobox"
         const val PACKAGE_MOOD = "$BASE_PACKAGE.mood"
-        const val PACKAGE_SPEECH_BOOSTER = "$BASE_PACKAGE.mood"
-        const val PACKAGE_INTELLIGENT_CLEANER = "$BASE_PACKAGE.mood"
-        const val PACKAGE_PIANO_K3 = "$BASE_PACKAGE.mood"
-        const val PACKAGE_AYO_MENGHITUNG = "$BASE_PACKAGE.mood"
-        const val PACKAGE_DICTIONARY_BOX = "$BASE_PACKAGE.mood"
-
+        const val PACKAGE_SPEECH_BOOSTER = "$BASE_PACKAGE.speechbooster"
+        const val PACKAGE_INTELLIGENT_CLEANER = "$BASE_PACKAGE.cleaner"
+        const val PACKAGE_PIANO_K3 = "$BASE_PACKAGE.pianok3g"
+        const val PACKAGE_AYO_MENGHITUNG = "$BASE_PACKAGE.ayomenghitung"
+        const val PACKAGE_DICTIONARY_BOX = "$BASE_PACKAGE.kamusapps"
+        const val PACKAGE_MVVM = "$BASE_PACKAGE.mvvm"
 
     }
 
