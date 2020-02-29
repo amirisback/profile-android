@@ -142,6 +142,15 @@ class ConstHelper {
         const val PACKAGE_DICTIONARY_BOX = "$BASE_PACKAGE.kamusapps"
         const val PACKAGE_MVVM = "$BASE_PACKAGE.mvvm"
 
+        const val PACKAGE_FROZEN_2048 = "$BASE_PACKAGE.frozen2048"
+        const val PACKAGE_POKETMN_2048 = "$BASE_PACKAGE.poketmn2048"
+        const val PACKAGE_INTENTIONS = "$BASE_PACKAGE.justinbmusic"
+        const val PACKAGE_HINDIA = "$BASE_PACKAGE.hindiaevaluasi"
+        const val PACKAGE_PRAY_BOX = "$BASE_PACKAGE.praybox"
+        const val PACKAGE_STICKER_WA_POKETMN = "$BASE_PACKAGE.stickerwapokeeetmon"
+        const val PACKAGE_VIPROX_VPN = "$BASE_PACKAGE.viprox"
+        const val PACKAGE_WALLPAPER_SW = "$BASE_PACKAGE.wallpapersw"
+
     }
 
     object Const {
