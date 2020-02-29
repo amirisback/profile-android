@@ -32,7 +32,7 @@
     <color name="colorTextWhite">@color/colorBaseWhite</color>
     <color name="colorTextBlack">@color/colorBaseBlack</color>
     <color name="colorTextGreen">#009562</color>
-    <color name="colorTextGrey">#AE000000</color>
+    <color name="colorTextGrey">#000000</color>
 
     <color name="activity_background">#000</color>
     <color name="fragment_background">#4285f4</color>
