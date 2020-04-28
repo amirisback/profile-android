@@ -45,7 +45,6 @@
         android:id="@+id/img_product_icon"
         android:layout_width="@dimen/dimens_img_product_150dp"
         android:layout_height="@dimen/dimens_img_product_150dp"
-        android:layout_marginBottom="@dimen/dimen_big_super_24dp"
-        android:src="@drawable/ic_product_finpro" />
+        android:layout_marginBottom="@dimen/dimen_big_super_24dp"/>
 
 </LinearLayout>

@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.helper.BaseHelper
-import com.frogobox.faisalamirprofile.helper.ConstHelper
+import com.frogobox.faisalamirprofile.util.ConstHelper
 
 
 /**

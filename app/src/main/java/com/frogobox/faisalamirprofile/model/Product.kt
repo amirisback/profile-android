@@ -18,8 +18,8 @@ package com.frogobox.faisalamirprofile.model
  *
  */
 data class Product(
-    val productName: String,
-    val productIcon: Int,
-    val productType: Int,
-    val productLink: String?
+    val name: String,
+    val icon: String,
+    val type: String,
+    val link: String
 )

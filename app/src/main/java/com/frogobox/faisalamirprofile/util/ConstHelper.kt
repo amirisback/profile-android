@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.helper
+package com.frogobox.faisalamirprofile.util
 
 import android.Manifest
 import android.os.Environment

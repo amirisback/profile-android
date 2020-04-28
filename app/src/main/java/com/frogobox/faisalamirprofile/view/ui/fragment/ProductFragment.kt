@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.ui.BaseFragment
-import com.frogobox.faisalamirprofile.helper.PagerHelper
+import com.frogobox.faisalamirprofile.util.PagerHelper
 import kotlinx.android.synthetic.main.fragment_product.*
 
 

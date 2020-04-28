@@ -4,13 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.adapter.BaseViewListener
 import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.Product
-import com.frogobox.faisalamirprofile.view.adapter.ProductAdapter
+import com.frogobox.faisalamirprofile.util.FuncHelper
+import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
 import kotlinx.android.synthetic.main.fragment_product_child.*
+import kotlinx.android.synthetic.main.item_product.view.*
 
 class ProductDebugFragment : BaseFragment(), BaseViewListener<Product> {
 
@@ -27,87 +29,38 @@ class ProductDebugFragment : BaseFragment(), BaseViewListener<Product> {
         initListView()
     }
 
-    private fun initArrayModel(): MutableList<Product> {
-
-        val arrayProduct: MutableList<Product> = mutableListOf()
-
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_cat),
-                R.drawable.ic_product_cat,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-
-            )
-        )
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_finpro),
-                R.drawable.ic_product_finpro,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_football),
-                R.drawable.ic_product_football,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_frogonews),
-                R.drawable.ic_product_frogonews,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_jami),
-                R.drawable.ic_product_jami,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_movie),
-                R.drawable.ic_product_movie,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_romis),
-                R.drawable.ic_product_romis,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-        arrayProduct.add(
-            Product(
-                getString(R.string.product_name_shejek),
-                R.drawable.ic_product_shejek,
-                R.drawable.ic_product_type_debug,
-                getString(R.string.dummy)
-            )
-        )
-
-        return arrayProduct
-
+    private fun listProduct(): MutableList<Product>? {
+        return context?.let { FuncHelper.listProduct(it, "product_debug.json") }
     }
 
     private fun initListView() {
 
-        val adapter = ProductAdapter()
-        adapter.setupRequirement(this, initArrayModel(), R.layout.item_product)
-        rv_product.adapter = adapter
-        rv_product.layoutManager = GridLayoutManager(context, 2)
+        val adapterCallback = object : FrogoAdapterCallback<Product> {
+            override fun onItemClicked(data: Product) {
+                mActivity.baseStartExplicit(data.link)
+            }
+
+            override fun onItemLongClicked(data: Product) {}
+
+            override fun setupInitComponent(view: View, data: Product) {
+                Glide.with(view.context).load(
+                    FuncHelper.getDrawableString(
+                        view.context,
+                        data.icon
+                    )
+                ).into(view.img_product_icon)
+                view.tv_product_name.text = data.name
+            }
+        }
+
+        rv_product.injector<Product>()
+            .addData(listProduct()!!)
+            .addCustomView(R.layout.item_product)
+            .addEmptyView(null)
+            .addCallback(adapterCallback)
+            .createLayoutGrid(2)
+            .createAdapter()
+            .build(rv_product)
 
     }
 

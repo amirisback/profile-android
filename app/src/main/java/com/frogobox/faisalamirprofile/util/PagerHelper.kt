@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.helper
+package com.frogobox.faisalamirprofile.util
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -21,7 +21,7 @@ import androidx.fragment.app.FragmentPagerAdapter
  * com.frogobox.speechbooster.util.helper
  *
  */
-@Suppress("DEPRECATION")
+
 class PagerHelper(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager){
 
     private val fragments = ArrayList<Fragment>()
