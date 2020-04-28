@@ -4,16 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.adapter.BaseViewListener
 import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.SocialMedia
-import com.frogobox.faisalamirprofile.view.adapter.SocialMediaAdapter
+import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
 import kotlinx.android.synthetic.main.fragment_social.*
+import kotlinx.android.synthetic.main.item_social_media.view.*
 
-class SocialOrganizationFragment : BaseFragment(), BaseViewListener<SocialMedia> {
+class SocialOrganizationFragment : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,13 +61,27 @@ class SocialOrganizationFragment : BaseFragment(), BaseViewListener<SocialMedia>
     }
 
     private fun initListView() {
-        val adapter = SocialMediaAdapter()
-        adapter.setupRequirement(this, initArrayModel(), R.layout.item_social_media)
-        rv_social_media.adapter = adapter
-        rv_social_media.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-    }
 
-    override fun onItemClicked(data: SocialMedia) {}
-    override fun onItemLongClicked(data: SocialMedia) {}
+        val adapterCallback = object : FrogoAdapterCallback<SocialMedia> {
+            override fun onItemClicked(data: SocialMedia) {}
+
+            override fun onItemLongClicked(data: SocialMedia) {}
+
+            override fun setupInitComponent(view: View, data: SocialMedia) {
+                view.img_icon.setImageResource(data.icon)
+                view.tv_link.text = data.link
+            }
+        }
+
+        rv_social_media.injector<SocialMedia>()
+            .addData(initArrayModel())
+            .addCustomView(R.layout.item_social_media)
+            .addEmptyView(null)
+            .addCallback(adapterCallback)
+            .createLayoutLinearVertical(false)
+            .createAdapter()
+            .build(rv_social_media)
+
+    }
 
 }
