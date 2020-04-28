@@ -10,6 +10,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    def versionMajor = 1
+    def versionMinor = 1
+    def versionPatch = 2
+
+    def projectVersionCode = (versionMajor*100) + (versionMinor*10) + (versionPatch*1)
+    def projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
+
     // Declaration app name
     def nameApp = "Muhammad Faisal Amir"
 
@@ -33,8 +40,8 @@ android {
         applicationId "com.frogobox.faisalamirprofile"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 5
-        versionName "1.1.2"
+        versionCode projectVersionCode
+        versionName projectVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         // Declaration apk / aab name
