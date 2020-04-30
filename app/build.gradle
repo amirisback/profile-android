@@ -103,7 +103,22 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // library frogo-recycler-view
-    implementation 'com.github.amirisback:frogo-recycler-view:2.2.2'
+    implementation 'com.github.amirisback:frogo-recycler-view:2.2.4'
+
+    // library consumable code news api
+    implementation 'com.github.amirisback:consumable-code-news-api:1.0.3'
+
+    // library consumable code the sport db api
+    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.5'
+
+    // library consumable code movie tmdb api
+    implementation 'com.github.amirisback:consumable-code-movie-tmdb-api:1.0.9'
+
+    // library consumable code pixabay api
+    implementation 'com.github.amirisback:consumable-code-pixabay-api:1.0.1'
+
+    // library consumable code the meal db api
+    implementation 'com.github.amirisback:consumable-code-the-meal-db-api:1.0.1'
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'

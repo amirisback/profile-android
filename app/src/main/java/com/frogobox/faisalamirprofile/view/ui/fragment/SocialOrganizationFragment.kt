@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.SocialMedia
-import com.frogobox.recycler.boilerplate.adapter.callback.FrogoAdapterCallback
+import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
 import kotlinx.android.synthetic.main.fragment_social.*
 import kotlinx.android.synthetic.main.item_social_media.view.*
 
@@ -62,7 +62,7 @@ class SocialOrganizationFragment : BaseFragment() {
 
     private fun initListView() {
 
-        val adapterCallback = object : FrogoAdapterCallback<SocialMedia> {
+        val adapterCallback = object : FrogoViewAdapterCallback<SocialMedia> {
             override fun onItemClicked(data: SocialMedia) {}
 
             override fun onItemLongClicked(data: SocialMedia) {}
@@ -79,8 +79,7 @@ class SocialOrganizationFragment : BaseFragment() {
             .addEmptyView(null)
             .addCallback(adapterCallback)
             .createLayoutLinearVertical(false)
-            .createAdapter()
-            .build(rv_social_media)
+            .build()
 
     }
 
