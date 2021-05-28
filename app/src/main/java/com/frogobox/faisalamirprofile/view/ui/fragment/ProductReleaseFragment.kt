@@ -9,7 +9,7 @@ import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.base.ui.BaseFragment
 import com.frogobox.faisalamirprofile.model.Product
 import com.frogobox.faisalamirprofile.util.FuncHelper
-import com.frogobox.recycler.boilerplate.viewrclass.FrogoViewAdapterCallback
+import com.frogobox.recycler.core.IFrogoViewAdapter
 import kotlinx.android.synthetic.main.fragment_product_child.*
 import kotlinx.android.synthetic.main.item_product.view.*
 
@@ -34,7 +34,7 @@ class ProductReleaseFragment : BaseFragment() {
 
     private fun initListView() {
 
-        val adapterCallback = object : FrogoViewAdapterCallback<Product> {
+        val adapterCallback = object : IFrogoViewAdapter<Product> {
             override fun onItemClicked(data: Product) {
                 mActivity.baseStartExplicit(data.link)
             }
