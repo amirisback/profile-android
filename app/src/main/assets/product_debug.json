@@ -4,5 +4,31 @@
     "icon": "ic_product_type_debug",
     "type": "open source",
     "link": "https://github.com/amirisback/frogo-recycler-view"
+  },
+  {
+    "name": "frogo-ui-kit",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/amirisback/frogo-ui-kit"
+  },
+  {
+    "name": "frogo-sdk",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/amirisback/frogo-sdk"
+  },
+  {
+    "name": "frogo-log",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/amirisback/frogo-log"
+  },
+  {
+    "name": "frogo-notification",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/amirisback/frogo-notification"
   }
+
+
 ]
