@@ -22,13 +22,10 @@ Very open to anyone, I'll write your name under this, please contribute by sendi
 
 Name Of Contribute
 - Muhammad Faisal Amir
-- Saiful Apriyanto
+- Waiting List
 - Waiting List
 
 Waiting for your contribute
-
-## Insipiration
-- Belajar Pidato [Click Here](https://play.google.com/store/apps/details?id=org.d3ifcool.belajarpidato)
 
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
