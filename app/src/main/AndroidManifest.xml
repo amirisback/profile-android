@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.frogobox.faisalamirprofile.view.ui.activity.SocialActivity" />
-        <activity android:name="com.frogobox.faisalamirprofile.view.ui.activity.AboutUsActivity" />
+        <activity android:name="com.frogobox.faisalamirprofile.mvvm.social.SocialActivity" />
+        <activity android:name="com.frogobox.faisalamirprofile.mvvm.main.AboutUsActivity" />
         <activity
-            android:name="com.frogobox.faisalamirprofile.view.ui.activity.MainActivity"
+            android:name="com.frogobox.faisalamirprofile.mvvm.main.MainActivity"
             android:theme="@style/AppThemeNoToolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

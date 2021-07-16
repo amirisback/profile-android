@@ -1,18 +1,20 @@
-package com.frogobox.faisalamirprofile.view.ui.activity
+package com.frogobox.faisalamirprofile.mvvm.social
 
 import android.os.Bundle
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.ui.BaseActivity
+import com.frogobox.faisalamirprofile.core.BaseActivity
+import com.frogobox.faisalamirprofile.databinding.ActivitySocialBinding
 import com.frogobox.faisalamirprofile.util.PagerHelper
-import com.frogobox.faisalamirprofile.view.ui.fragment.SocialMediaFragment
-import com.frogobox.faisalamirprofile.view.ui.fragment.SocialOrganizationFragment
-import kotlinx.android.synthetic.main.activity_social.*
 
-class SocialActivity : BaseActivity() {
+class SocialActivity : BaseActivity<ActivitySocialBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_social)
+    override fun setupViewBinding(): ActivitySocialBinding {
+        return ActivitySocialBinding.inflate(layoutInflater)
+    }
+
+    override fun setupViewModel() {}
+
+    override fun setupUI(savedInstanceState: Bundle?) {
         setupToolbar()
         setupViewPager()
     }
@@ -32,9 +34,10 @@ class SocialActivity : BaseActivity() {
             SocialOrganizationFragment(),
             resources.getString(R.string.title_social_organization)
         )
-        viewpager.adapter = pagerAdapter
-        tablayout.setupWithViewPager(viewpager)
+        binding.apply {
+            viewpager.adapter = pagerAdapter
+            tablayout.setupWithViewPager(viewpager)
+        }
     }
-
 
 }

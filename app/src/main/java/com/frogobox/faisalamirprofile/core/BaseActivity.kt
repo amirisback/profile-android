@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.base.ui
+package com.frogobox.faisalamirprofile.core
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.base.helper.BaseHelper
 import com.frogobox.faisalamirprofile.util.ConstHelper
 
 
@@ -33,12 +33,24 @@ import com.frogobox.faisalamirprofile.util.ConstHelper
  *
  */
 
-open class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
-    lateinit var mActivity: AppCompatActivity
+    protected lateinit var mActivity: AppCompatActivity
+
+    protected lateinit var binding: VB
+
+    abstract fun setupViewBinding(): VB
+
+    abstract fun setupViewModel()
+
+    abstract fun setupUI(savedInstanceState: Bundle?)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = setupViewBinding()
+        setContentView(binding.root)
+        setupViewModel()
+        setupUI(savedInstanceState)
         mActivity = this
     }
 
@@ -108,7 +120,7 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     protected fun <Model> baseFragmentNewInstance(
-        fragment: BaseFragment,
+        fragment: BaseFragment<*>,
         argumentKey: String,
         extraDataResult: Model
     ) {

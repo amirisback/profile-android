@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.base.adapter
+package com.frogobox.faisalamirprofile.core
 
 /**
  * Created by Faisal Amir

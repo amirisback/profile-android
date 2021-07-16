@@ -8,5 +8,5 @@
     android:clipToPadding="false"
     android:paddingTop="@dimen/dimen_big_16dp"
     android:paddingRight="@dimen/dimen_big_16dp"
-    tools:context=".view.ui.fragment.ProductFragment"
+    tools:context=".mvvm.product.ProductFragment"
     tools:listitem="@layout/item_product" />

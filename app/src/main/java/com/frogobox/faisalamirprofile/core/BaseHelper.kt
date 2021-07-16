@@ -1,4 +1,4 @@
-package com.frogobox.faisalamirprofile.base.helper
+package com.frogobox.faisalamirprofile.core
 
 import com.google.gson.Gson
 
