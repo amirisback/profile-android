@@ -16,7 +16,7 @@ class AboutUsActivity : BaseActivity<ActivityAboutUsBinding>() {
     override fun setupUI(savedInstanceState: Bundle?) {
         setupDetailActivity("")
         Glide.with(this)
-            .load("https://lh3.googleusercontent.com/XMPeB-RfCZLcWonMXASsBXCb9XSx-OlOo0smJSS07nqf-Gar12297syEhpaE2-Qf-g=w144-h144-n-rw")
+            .load("https://play-lh.googleusercontent.com/jFHa5EHuPWpvwcRWoUyXpxn97Jo68h5xNFMf7vj32Ygc8Z99Rz9E3CJzePXkY8gcJQ=w288-h288-n-rw")
             .into(binding.ivLogo)
 
     }
