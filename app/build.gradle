@@ -1,48 +1,52 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
 
 android {
+
+    def versionMajor = 1
+    def versionMinor = 1
+    def versionPatch = 2
+
+    def appDomain = "com"
+    def appDevConsole = "frogobox"
+    def appName = "faisalamirprofile"
+
+    def projectApplicationId = "$appDomain.$appDevConsole.$appName"
+    def projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
+    def projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
+
+    // Declaration app name
+    def nameApp = "Muhammad Faisal Amir"
+
+    buildFeatures {
+        viewBinding = true
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    def versionMajor = 1
-    def versionMinor = 1
-    def versionPatch = 2
-
-    def projectVersionCode = (versionMajor*100) + (versionMinor*10) + (versionPatch*1)
-    def projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
-
-    // Declaration app name
-    def nameApp = "Muhammad Faisal Amir"
-
-    def versionPropsFile = file('version.properties')
-    Properties versionProps = new Properties()
-
-    if (versionPropsFile.canRead()) {
-        versionProps.load(new FileInputStream(versionPropsFile))
-    } else {
-        versionProps['VERSION_CODE'] = '0'
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
-
-    def code = versionProps['VERSION_CODE'].toInteger()
-
-    versionProps['VERSION_CODE'] = code.toString()
-    versionProps.store(versionPropsFile.newWriter(), null)
 
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+
     defaultConfig {
-        applicationId "com.frogobox.faisalamirprofile"
+        applicationId projectApplicationId
         minSdkVersion 21
         targetSdkVersion 30
         versionCode projectVersionCode
         versionName projectVersionName
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
 
         // Declaration apk / aab name
         def nameAPK = "faisal-amir"
@@ -51,7 +55,8 @@ android {
         def debugAttribute = " Development"
         def nameAppDebug = nameApp + debugAttribute
 
-        setProperty("archivesBaseName", nameAPK + versionName + "#" + code + "-"
+        // Naming APK // AAB
+        setProperty("archivesBaseName", nameAPK + versionName + "#" + versionCode + "-"
                 + new Date().format('ddMMyy'))
 
         resConfigs "en", "id"
@@ -93,38 +98,38 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.google.android.material:material:1.4.0-beta01'
+    implementation 'com.google.android.material:material:1.5.0-alpha01'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // library frogo-recycler-view
-    implementation 'com.github.amirisback:frogo-recycler-view:3.5.0'
+    implementation 'com.github.amirisback:frogo-recycler-view:3.7.2'
 
     // library consumable code news api
     implementation 'com.github.amirisback:consumable-code-news-api:1.0.5'
 
     // library consumable code the sport db api
-    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.0.5'
+    implementation 'com.github.amirisback:consumable-code-the-sport-db-api:1.1.1'
 
     // library consumable code movie tmdb api
     implementation 'com.github.amirisback:consumable-code-movie-tmdb-api:1.2.0'
 
     // library consumable code pixabay api
-    implementation 'com.github.amirisback:consumable-code-pixabay-api:1.0.1'
+    implementation 'com.github.amirisback:consumable-code-pixabay-api:1.1.0'
 
     // library consumable code the meal db api
-    implementation 'com.github.amirisback:consumable-code-the-meal-db-api:1.0.1'
+    implementation 'com.github.amirisback:consumable-code-the-meal-db-api:1.0.2'
 
     // Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
