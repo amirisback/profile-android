@@ -6,18 +6,6 @@
     "link": "https://github.com/amirisback/frogo-recycler-view"
   },
   {
-    "name": "frogo-ui-kit",
-    "icon": "ic_product_type_debug",
-    "type": "open source",
-    "link": "https://github.com/amirisback/frogo-ui-kit"
-  },
-  {
-    "name": "frogo-sdk",
-    "icon": "ic_product_type_debug",
-    "type": "open source",
-    "link": "https://github.com/amirisback/frogo-sdk"
-  },
-  {
     "name": "frogo-log",
     "icon": "ic_product_type_debug",
     "type": "open source",
@@ -28,7 +16,29 @@
     "icon": "ic_product_type_debug",
     "type": "open source",
     "link": "https://github.com/amirisback/frogo-notification"
+  },
+  {
+    "name": "frogo-admob",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/amirisback/frogo-admob"
+  },
+  {
+    "name": "frogo-android-ui-kit",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/frogobox/frogo-android-ui-kit"
+  },
+  {
+    "name": "frogo-android-sdk",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/frogobox/frogo-android-sdk"
+  },
+  {
+    "name": "frogo-consume-api",
+    "icon": "ic_product_type_debug",
+    "type": "open source",
+    "link": "https://github.com/frogobox/frogo-consume-api"
   }
-
-
 ]

@@ -1,20 +1,8 @@
 [
   {
-    "name": "Catalogue Movie : Open Source Project on Github",
-    "icon": "https://lh3.googleusercontent.com/FGtwWNAt7EBf8VxVpOzHIV9amUKsz6I9Oe8mTEcbjMUXLYV7-xulyQRLkevYkffbeQ=s180-rw",
-    "type": "ic_product_type_release",
-    "link": "https://play.google.com/store/apps/details?id=com.frogobox.mvvm"
-  },
-  {
     "name": "Belajar Pidato - Berpidato sampai seperti Presiden",
     "icon": "https://lh3.googleusercontent.com/Elsk1cbKZVEoBgIE0tqH3363vyjma3OaaTYAF_sjdTsuFdzCdK-UPvQ560tUc6LaAVyS=s180-rw",
     "type": "ic_product_type_release",
     "link": "https://play.google.com/store/apps/details?id=com.frogobox.speechbooster"
-  },
-  {
-    "name": "Muhammad Faisal Amir - (CV and Portofolio App)",
-    "icon": "https://lh3.googleusercontent.com/HTj8gCjyLsh0iYUiDdVh8DGVsvTB4xrubJnCH0ta62-6n5LA_SlXCCs0Tl8Brmwbqg8=s180-rw",
-    "type": "ic_product_type_release",
-    "link": "https://play.google.com/store/apps/details?id=com.frogobox.faisalamirprofile"
   }
 ]

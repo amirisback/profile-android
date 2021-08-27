@@ -73,8 +73,8 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
                 )
             }
 
-            override fun setupInitComponent(view: ItemEducationBinding, data: Education) {
-                view.apply {
+            override fun setupInitComponent(binding: ItemEducationBinding, data: Education) {
+                binding.apply {
                     imgSchoolLogo.setImageResource(data.imageLogo)
                     tvEduLevel.text = data.level
                     tvEduInstitute.text = data.institute

@@ -44,10 +44,10 @@ class ProductReleaseFragment : BaseFragment<FragmentProductChildBinding>() {
                 return ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             }
 
-            override fun setupInitComponent(view: ItemProductBinding, data: Product) {
-                Glide.with(mActivity).load(data.icon).into(view.imgProductIcon)
-                view.tvProductName.text = data.name
-                view.tvProductName.setCompoundDrawablesWithIntrinsicBounds(
+            override fun setupInitComponent(binding: ItemProductBinding, data: Product) {
+                Glide.with(mActivity).load(data.icon).into(binding.imgProductIcon)
+                binding.tvProductName.text = data.name
+                binding.tvProductName.setCompoundDrawablesWithIntrinsicBounds(
                     FuncHelper.getDrawableString(
                         mActivity,
                         data.type

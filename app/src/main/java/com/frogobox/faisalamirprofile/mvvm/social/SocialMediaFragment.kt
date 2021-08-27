@@ -97,9 +97,9 @@ class SocialMediaFragment : BaseFragment<FragmentSocialBinding>() {
                 )
             }
 
-            override fun setupInitComponent(view: ItemSocialMediaBinding, data: SocialMedia) {
-                view.imgIcon.setImageResource(data.icon)
-                view.tvLink.text = data.link
+            override fun setupInitComponent(binding: ItemSocialMediaBinding, data: SocialMedia) {
+                binding.imgIcon.setImageResource(data.icon)
+                binding.tvLink.text = data.link
             }
         }
 

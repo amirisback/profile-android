@@ -6,7 +6,7 @@ Profil Muhammad Faisal in Android Apps
 
 | UI 1 | UI 2 | UI 3 |
 |:----:|:----:|:----:|
-|<span align="center"><img width="200px" height="360px" src="docs/image/ss_1.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_3.png"></span> |
+|<img width="200px" height="360px" src="docs/image/ss_1.png"> | <img width="200px" height="360px" src="docs/image/ss_2.png"> | <img width="200px" height="360px" src="docs/image/ss_3.png"> |
 
 ## Version Release
 This Is Latest Release

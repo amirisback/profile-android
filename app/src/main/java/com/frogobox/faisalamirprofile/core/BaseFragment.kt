@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.google.gson.Gson
 
 /**
  * Created by Faisal Amir
@@ -71,7 +72,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     }
 
     fun <Model> baseNewInstance(argsKey: String, data: Model) {
-        val argsData = BaseHelper().baseToJson(data)
+        val argsData = Gson().toJson(data)
         val bundleArgs = Bundle().apply {
             putString(argsKey, argsData)
         }
@@ -80,9 +81,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     protected inline fun <reified Model> baseGetInstance(argsKey: String): Model {
         val argsData = this.arguments?.getString(argsKey)
-        val instaceData = BaseHelper()
-            .baseFromJson<Model>(argsData)
-        return instaceData
+        return Gson().fromJson(argsData, Model::class.java)
     }
 
     protected fun checkArgument(argsKey: String): Boolean {
@@ -118,7 +117,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         data: Model
     ) {
         val intent = Intent(context, ClassActivity::class.java)
-        val extraData = BaseHelper().baseToJson(data)
+        val extraData = Gson().toJson(data)
         intent.putExtra(extraKey, extraData)
         this.startActivity(intent)
     }

@@ -48,10 +48,10 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
                 )
             }
 
-            override fun setupInitComponent(view: ItemProductBinding, data: Product) {
+            override fun setupInitComponent(binding: ItemProductBinding, data: Product) {
                 Glide.with(mActivity).load(FuncHelper.getDrawableString(mActivity, data.icon))
-                    .into(view.imgProductIcon)
-                view.tvProductName.text = data.name
+                    .into(binding.imgProductIcon)
+                binding.tvProductName.text = data.name
             }
         }
 

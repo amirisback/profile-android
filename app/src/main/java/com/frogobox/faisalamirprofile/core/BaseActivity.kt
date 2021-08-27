@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.frogobox.faisalamirprofile.R
-import com.frogobox.faisalamirprofile.util.ConstHelper
+import com.google.gson.Gson
 
 
 /**
@@ -67,13 +67,10 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     }
 
     protected inline fun <reified ClassActivity> setupSplashScreen() {
-        Handler().postDelayed(object : Runnable {
-            override fun run() {
-                baseStartActivity<ClassActivity>()
-                this@BaseActivity.finish()
-            }
-
-        }, ConstHelper.Const.SPLASH_INTERVAL.toLong())
+        Handler().postDelayed({
+            baseStartActivity<ClassActivity>()
+            this@BaseActivity.finish()
+        }, 1000)
     }
 
     protected fun setupFullScreen() {
@@ -104,15 +101,14 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         data: Model
     ) {
         val intent = Intent(this, ClassActivity::class.java)
-        val extraData = BaseHelper().baseToJson(data)
+        val extraData = Gson().toJson(data)
         intent.putExtra(extraKey, extraData)
         this.startActivity(intent)
     }
 
     protected inline fun <reified Model> baseGetExtraData(extraKey: String): Model {
         val extraIntent = intent.getStringExtra(extraKey)
-        val extraData = BaseHelper().baseFromJson<Model>(extraIntent)
-        return extraData
+        return Gson().fromJson(extraIntent, Model::class.java)
     }
 
     protected fun checkExtra(extraKey: String): Boolean {
