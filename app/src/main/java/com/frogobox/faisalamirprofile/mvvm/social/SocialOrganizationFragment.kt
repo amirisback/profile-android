@@ -8,6 +8,7 @@ import com.frogobox.faisalamirprofile.core.BaseFragment
 import com.frogobox.faisalamirprofile.databinding.FragmentSocialBinding
 import com.frogobox.faisalamirprofile.databinding.ItemSocialMediaBinding
 import com.frogobox.faisalamirprofile.model.SocialMedia
+import com.frogobox.recycler.core.FrogoRecyclerNotifyListener
 import com.frogobox.recycler.core.IFrogoBindingAdapter
 
 class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
@@ -63,10 +64,20 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
     private fun initListView() {
 
         val callback = object : IFrogoBindingAdapter<SocialMedia, ItemSocialMediaBinding> {
-            override fun onItemClicked(data: SocialMedia) {
+            override fun onItemClicked(
+                binding: ItemSocialMediaBinding,
+                data: SocialMedia,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>
+            ) {
             }
 
-            override fun onItemLongClicked(data: SocialMedia) {
+            override fun onItemLongClicked(
+                binding: ItemSocialMediaBinding,
+                data: SocialMedia,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>
+            ) {
             }
 
             override fun setViewBinding(parent: ViewGroup): ItemSocialMediaBinding {
@@ -77,7 +88,12 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
                 )
             }
 
-            override fun setupInitComponent(binding: ItemSocialMediaBinding, data: SocialMedia) {
+            override fun setupInitComponent(
+                binding: ItemSocialMediaBinding,
+                data: SocialMedia,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>
+            ) {
                 binding.imgIcon.setImageResource(data.icon)
                 binding.tvLink.text = data.link
             }

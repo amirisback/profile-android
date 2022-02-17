@@ -9,6 +9,7 @@ import com.frogobox.faisalamirprofile.databinding.FragmentProductChildBinding
 import com.frogobox.faisalamirprofile.databinding.ItemProductBinding
 import com.frogobox.faisalamirprofile.model.Product
 import com.frogobox.faisalamirprofile.util.FuncHelper
+import com.frogobox.recycler.core.FrogoRecyclerNotifyListener
 import com.frogobox.recycler.core.IFrogoBindingAdapter
 
 class ProductReleaseFragment : BaseFragment<FragmentProductChildBinding>() {
@@ -34,17 +35,32 @@ class ProductReleaseFragment : BaseFragment<FragmentProductChildBinding>() {
     private fun initListView() {
 
         val callback = object : IFrogoBindingAdapter<Product, ItemProductBinding> {
-            override fun onItemClicked(data: Product) {
+            override fun onItemClicked(
+                binding: ItemProductBinding,
+                data: Product,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<Product>
+            ) {
                 mActivity.baseStartExplicit(data.link)
             }
 
-            override fun onItemLongClicked(data: Product) {}
+            override fun onItemLongClicked(
+                binding: ItemProductBinding,
+                data: Product,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<Product>
+            ) {}
 
             override fun setViewBinding(parent: ViewGroup): ItemProductBinding {
                 return ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             }
 
-            override fun setupInitComponent(binding: ItemProductBinding, data: Product) {
+            override fun setupInitComponent(
+                binding: ItemProductBinding,
+                data: Product,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<Product>
+            ) {
                 Glide.with(mActivity).load(data.icon).into(binding.imgProductIcon)
                 binding.tvProductName.text = data.name
                 binding.tvProductName.setCompoundDrawablesWithIntrinsicBounds(

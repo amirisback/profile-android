@@ -142,10 +142,6 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         )
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return true
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {

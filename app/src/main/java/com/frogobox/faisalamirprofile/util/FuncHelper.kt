@@ -23,7 +23,7 @@ import java.io.IOException
  */
 object FuncHelper {
 
-    fun getJsonAssets(context: Context, filename: String): String? {
+    private fun getJsonAssets(context: Context, filename: String): String? {
         val jsonString: String
         try {
             jsonString = context.assets.open(filename).bufferedReader().use { it.readText() }

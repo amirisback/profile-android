@@ -8,6 +8,7 @@ import com.frogobox.faisalamirprofile.core.BaseFragment
 import com.frogobox.faisalamirprofile.databinding.FragmentEducationBinding
 import com.frogobox.faisalamirprofile.databinding.ItemEducationBinding
 import com.frogobox.faisalamirprofile.model.Education
+import com.frogobox.recycler.core.FrogoRecyclerNotifyListener
 import com.frogobox.recycler.core.IFrogoBindingAdapter
 
 
@@ -59,10 +60,20 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
     private fun initListView() {
 
         val callback = object : IFrogoBindingAdapter<Education, ItemEducationBinding> {
-            override fun onItemClicked(data: Education) {
+            override fun onItemClicked(
+                binding: ItemEducationBinding,
+                data: Education,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<Education>
+            ) {
             }
 
-            override fun onItemLongClicked(data: Education) {
+            override fun onItemLongClicked(
+                binding: ItemEducationBinding,
+                data: Education,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<Education>
+            ) {
             }
 
             override fun setViewBinding(parent: ViewGroup): ItemEducationBinding {
@@ -73,7 +84,12 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
                 )
             }
 
-            override fun setupInitComponent(binding: ItemEducationBinding, data: Education) {
+            override fun setupInitComponent(
+                binding: ItemEducationBinding,
+                data: Education,
+                position: Int,
+                notifyListener: FrogoRecyclerNotifyListener<Education>
+            ) {
                 binding.apply {
                     imgSchoolLogo.setImageResource(data.imageLogo)
                     tvEduLevel.text = data.level
