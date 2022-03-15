@@ -87,16 +87,16 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
-    implementation("com.google.code.gson:gson:2.8.9")
-    implementation("com.google.android.material:material:1.6.0-alpha02")
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation("com.google.android.material:material:1.6.0-alpha03")
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
-    implementation("com.github.amirisback:frogo-recycler-view:4.0.2")
-    implementation("com.github.frogobox:frogo-consume-api:1.0.8")
+    implementation("com.github.amirisback:frogo-recycler-view:4.0.5")
+    implementation("com.github.frogobox:frogo-consume-api:2.0.2")
 
     // Glide
-    implementation("com.github.bumptech.glide:glide:4.12.0")
-    kapt("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("com.github.bumptech.glide:glide:4.13.0")
+    kapt("com.github.bumptech.glide:compiler:4.13.0")
 
 }
