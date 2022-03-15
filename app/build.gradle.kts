@@ -82,21 +82,27 @@ android {
 
 dependencies {
    
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation(Androidx.appCompat)
+    implementation(Androidx.Core.ktx)
+    implementation(Androidx.Work.runtimeKtx)
 
-    implementation("com.google.code.gson:gson:2.9.0")
-    implementation("com.google.android.material:material:1.6.0-alpha03")
+    implementation(Androidx.Lifecycle.runtimeKtx)
+    implementation(Androidx.Lifecycle.livedataKtx)
+    implementation(Androidx.Lifecycle.viewmodelKtx)
 
-    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation(Google.gson)
+    implementation(Google.material)
 
-    implementation("com.github.amirisback:frogo-recycler-view:4.0.5")
-    implementation("com.github.frogobox:frogo-consume-api:2.0.2")
+    implementation(Util.hdodenhofCircleImageView)
 
-    // Glide
-    implementation("com.github.bumptech.glide:glide:4.13.0")
-    kapt("com.github.bumptech.glide:compiler:4.13.0")
+    implementation(Frogo.sdk)
+    implementation(Frogo.ui)
+    implementation(Frogo.consumeApi)
+    implementation(Frogo.recyclerView)
+    implementation(Frogo.log)
+    implementation(Frogo.notification)
+
+    implementation(Util.glide)
+    kapt(Util.glideCompiler)
 
 }
