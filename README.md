@@ -1,12 +1,23 @@
 ## Profil Amir
-Profil Muhammad Faisal in Android Apps
-- Link PlayStore [Click Here](https://play.google.com/store/apps/details?id=com.frogobox.faisalamirprofile)
+[![Android CI](https://github.com/amirisback/profile-android/actions/workflows/android-ci.yml/badge.svg)](https://github.com/amirisback/profile-android/actions/workflows/android-ci.yml)
+[![Scan with Detekt](https://github.com/amirisback/profile-android/actions/workflows/detekt-analysis.yml/badge.svg)](https://github.com/amirisback/profile-android/actions/workflows/detekt-analysis.yml)
+[![pages-build-deployment](https://github.com/amirisback/profile-android/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/amirisback/profile-android/actions/workflows/pages/pages-build-deployment)
+- Profil Muhammad Faisal in Android Apps
 
 ## Screen Shoot
 
-| UI 1 | UI 2 | UI 3 |
-|:----:|:----:|:----:|
-|<img width="200px" height="360px" src="docs/image/ss_1.png"> | <img width="200px" height="360px" src="docs/image/ss_2.png"> | <img width="200px" height="360px" src="docs/image/ss_3.png"> |
+<table>
+    <tr>
+        <th>UI 1</th>
+        <th>UI 2</th>
+        <th>UI 3</th>
+    </tr>
+    <tr>
+        <td><img width="200px" height="360px" src="docs/image/ss_1.png"></td>
+        <td><img width="200px" height="360px" src="docs/image/ss_2.png"></td>
+        <td><img width="200px" height="360px" src="docs/image/ss_3.png"></td>
+    </tr>
+</table>
 
 ## Version Release
 This Is Latest Release
