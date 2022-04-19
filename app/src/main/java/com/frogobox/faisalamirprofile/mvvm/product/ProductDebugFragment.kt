@@ -2,6 +2,7 @@ package com.frogobox.faisalamirprofile.mvvm.product
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.frogobox.faisalamirprofile.core.BaseFragment
@@ -16,7 +17,7 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup
+        container: ViewGroup?
     ): FragmentProductChildBinding {
         return FragmentProductChildBinding.inflate(inflater, container, false)
     }
@@ -24,7 +25,7 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupUI(savedInstanceState: Bundle?) {
+    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
         initListView()
     }
 
@@ -49,7 +50,8 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
                 data: Product,
                 position: Int,
                 notifyListener: FrogoRecyclerNotifyListener<Product>
-            ) {}
+            ) {
+            }
 
             override fun setViewBinding(parent: ViewGroup): ItemProductBinding {
                 return ItemProductBinding.inflate(
@@ -71,7 +73,7 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
             }
         }
 
-        binding?.apply {
+        binding.apply {
             rvProduct.injectorBinding<Product, ItemProductBinding>()
                 .addData(listProduct()!!)
                 .addCallback(callback)

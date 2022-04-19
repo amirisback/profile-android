@@ -2,6 +2,7 @@ package com.frogobox.faisalamirprofile.mvvm.education
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.core.BaseFragment
@@ -16,7 +17,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup
+        container: ViewGroup?
     ): FragmentEducationBinding {
         return FragmentEducationBinding.inflate(inflater, container, false)
     }
@@ -24,7 +25,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupUI(savedInstanceState: Bundle?) {
+    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
         initListView()
     }
 
@@ -101,7 +102,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
 
         }
 
-        binding?.apply {
+        binding.apply {
             rvEducation.injectorBinding<Education, ItemEducationBinding>()
                 .addData(initArrayModel())
                 .addCallback(callback)

@@ -3,6 +3,7 @@ package com.frogobox.faisalamirprofile.mvvm.social
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.core.BaseFragment
@@ -16,7 +17,7 @@ class SocialMediaFragment : BaseFragment<FragmentSocialBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup
+        container: ViewGroup?
     ): FragmentSocialBinding {
         return FragmentSocialBinding.inflate(inflater, container, false)
     }
@@ -24,7 +25,7 @@ class SocialMediaFragment : BaseFragment<FragmentSocialBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupUI(savedInstanceState: Bundle?) {
+    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
         initListView()
     }
 
@@ -119,7 +120,7 @@ class SocialMediaFragment : BaseFragment<FragmentSocialBinding>() {
             }
         }
 
-        binding?.apply {
+        binding.apply {
             rvSocialMedia.injectorBinding<SocialMedia, ItemSocialMediaBinding>()
                 .addData(initArrayModel())
                 .addCallback(callback)

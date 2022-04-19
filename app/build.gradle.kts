@@ -99,10 +99,8 @@ dependencies {
     implementation(Frogo.ui)
     implementation(Frogo.consumeApi)
     implementation(Frogo.recyclerView)
-    implementation(Frogo.log)
-    implementation(Frogo.notification)
 
-    implementation(Util.glide)
-    kapt(Util.glideCompiler)
+    implementation(GitHub.glide)
+    kapt(GitHub.glideCompiler)
 
 }

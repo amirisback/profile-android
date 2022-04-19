@@ -6,13 +6,13 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven { url = uri("https://jitpack.io") }
+    maven("https://jitpack.io")
 }
 
 dependencies {
     // library frogo-build-src
-    implementation("com.github.frogobox:frogo-build-src:1.0.8")
+    implementation("com.github.frogobox:frogo-build-src:1.2.4")
 
     // library open-build-src
-    implementation("com.github.frogobox:open-build-src:1.0.6")
+    implementation("com.github.frogobox:open-build-src:1.1.1")
 }
