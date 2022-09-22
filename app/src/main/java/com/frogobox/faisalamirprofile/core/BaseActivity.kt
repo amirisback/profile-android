@@ -1,19 +1,9 @@
 package com.frogobox.faisalamirprofile.core
 
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
-import android.os.Bundle
-import android.os.Handler
-import android.view.*
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.frogobox.faisalamirprofile.R
-import com.frogobox.sdk.view.FrogoActivity
-import com.google.gson.Gson
+import com.frogobox.sdk.view.FrogoBindActivity
 
 
 /**
@@ -34,7 +24,7 @@ import com.google.gson.Gson
  *
  */
 
-abstract class BaseActivity<VB : ViewBinding> : FrogoActivity<VB>() {
+abstract class BaseActivity<VB : ViewBinding> : FrogoBindActivity<VB>() {
 
     protected fun setupCustomTitleToolbar(title: Int) {
         supportActionBar?.setTitle(title)

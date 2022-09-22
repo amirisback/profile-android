@@ -15,7 +15,7 @@ class ProductFragment : BaseFragment<FragmentProductBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?
+        container: ViewGroup?,
     ): FragmentProductBinding {
         return FragmentProductBinding.inflate(inflater, container, false)
     }
@@ -23,7 +23,8 @@ class ProductFragment : BaseFragment<FragmentProductBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreatedExt(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreatedExt(view, savedInstanceState)
         setupViewPager()
     }
 

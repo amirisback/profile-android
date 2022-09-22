@@ -17,7 +17,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?
+        container: ViewGroup?,
     ): FragmentEducationBinding {
         return FragmentEducationBinding.inflate(inflater, container, false)
     }
@@ -25,7 +25,8 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreatedExt(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreatedExt(view, savedInstanceState)
         initListView()
     }
 
@@ -65,7 +66,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
                 binding: ItemEducationBinding,
                 data: Education,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<Education>
+                notifyListener: FrogoRecyclerNotifyListener<Education>,
             ) {
             }
 
@@ -73,7 +74,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
                 binding: ItemEducationBinding,
                 data: Education,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<Education>
+                notifyListener: FrogoRecyclerNotifyListener<Education>,
             ) {
             }
 
@@ -89,7 +90,7 @@ class EducationFragment : BaseFragment<FragmentEducationBinding>() {
                 binding: ItemEducationBinding,
                 data: Education,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<Education>
+                notifyListener: FrogoRecyclerNotifyListener<Education>,
             ) {
                 binding.apply {
                     imgSchoolLogo.setImageResource(data.imageLogo)

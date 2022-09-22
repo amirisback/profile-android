@@ -12,12 +12,13 @@ import com.frogobox.faisalamirprofile.model.Product
 import com.frogobox.faisalamirprofile.util.FuncHelper
 import com.frogobox.recycler.core.FrogoRecyclerNotifyListener
 import com.frogobox.recycler.core.IFrogoBindingAdapter
+import com.frogobox.sdk.util.FrogoFunc.getDrawableString
 
 class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?
+        container: ViewGroup?,
     ): FragmentProductChildBinding {
         return FragmentProductChildBinding.inflate(inflater, container, false)
     }
@@ -25,7 +26,8 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreatedExt(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreatedExt(view, savedInstanceState)
         initListView()
     }
 
@@ -40,7 +42,7 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
                 binding: ItemProductBinding,
                 data: Product,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<Product>
+                notifyListener: FrogoRecyclerNotifyListener<Product>,
             ) {
                 mActivity.baseStartExplicit(data.link)
             }
@@ -49,7 +51,7 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
                 binding: ItemProductBinding,
                 data: Product,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<Product>
+                notifyListener: FrogoRecyclerNotifyListener<Product>,
             ) {
             }
 
@@ -65,9 +67,9 @@ class ProductDebugFragment : BaseFragment<FragmentProductChildBinding>() {
                 binding: ItemProductBinding,
                 data: Product,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<Product>
+                notifyListener: FrogoRecyclerNotifyListener<Product>,
             ) {
-                Glide.with(mActivity).load(FuncHelper.getDrawableString(mActivity, data.icon))
+                Glide.with(requireContext()).load(getDrawableString(requireContext(), data.icon))
                     .into(binding.imgProductIcon)
                 binding.tvProductName.text = data.name
             }

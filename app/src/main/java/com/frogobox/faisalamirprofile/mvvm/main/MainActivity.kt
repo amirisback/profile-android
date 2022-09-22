@@ -6,9 +6,9 @@ import android.view.MenuItem
 import com.frogobox.faisalamirprofile.R
 import com.frogobox.faisalamirprofile.core.BaseActivity
 import com.frogobox.faisalamirprofile.databinding.ActivityMainBinding
-import com.frogobox.faisalamirprofile.mvvm.profile.ProfileFragment
 import com.frogobox.faisalamirprofile.mvvm.education.EducationFragment
 import com.frogobox.faisalamirprofile.mvvm.product.ProductFragment
+import com.frogobox.faisalamirprofile.mvvm.profile.ProfileFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -18,7 +18,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun setupViewModel() {}
 
-    override fun setupOnCreate(savedInstanceState: Bundle?) {
+    override fun onCreateExt(savedInstanceState: Bundle?) {
+        super.onCreateExt(savedInstanceState)
         setupToolbar()
         setupBottomNav(binding.framelayoutMainContainer.id)
         setupFragment(savedInstanceState)

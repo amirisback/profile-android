@@ -16,7 +16,7 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?
+        container: ViewGroup?,
     ): FragmentSocialBinding {
         return FragmentSocialBinding.inflate(inflater, container, false)
     }
@@ -24,7 +24,8 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreatedExt(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreatedExt(view, savedInstanceState)
         initListView()
     }
 
@@ -69,7 +70,7 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
                 binding: ItemSocialMediaBinding,
                 data: SocialMedia,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>
+                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>,
             ) {
             }
 
@@ -77,7 +78,7 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
                 binding: ItemSocialMediaBinding,
                 data: SocialMedia,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>
+                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>,
             ) {
             }
 
@@ -93,7 +94,7 @@ class SocialOrganizationFragment : BaseFragment<FragmentSocialBinding>() {
                 binding: ItemSocialMediaBinding,
                 data: SocialMedia,
                 position: Int,
-                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>
+                notifyListener: FrogoRecyclerNotifyListener<SocialMedia>,
             ) {
                 binding.imgIcon.setImageResource(data.icon)
                 binding.tvLink.text = data.link

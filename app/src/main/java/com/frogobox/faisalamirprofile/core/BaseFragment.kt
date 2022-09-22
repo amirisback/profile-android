@@ -1,15 +1,8 @@
 package com.frogobox.faisalamirprofile.core
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.frogobox.sdk.view.FrogoFragment
-import com.google.gson.Gson
+import com.frogobox.sdk.view.FrogoBindFragment
 
 /**
  * Created by Faisal Amir
@@ -28,7 +21,7 @@ import com.google.gson.Gson
  * com.frogobox.faisalamirprofile.base
  *
  */
-abstract class BaseFragment<VB : ViewBinding> : FrogoFragment<VB>() {
+abstract class BaseFragment<VB : ViewBinding> : FrogoBindFragment<VB>() {
 
     protected lateinit var mActivity: BaseActivity<*>
 

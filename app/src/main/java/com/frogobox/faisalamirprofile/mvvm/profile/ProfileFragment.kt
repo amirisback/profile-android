@@ -13,7 +13,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?
+        container: ViewGroup?,
     ): FragmentProfileBinding {
         return FragmentProfileBinding.inflate(inflater, container, false)
     }
@@ -21,7 +21,8 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
     override fun setupViewModel() {
     }
 
-    override fun setupOnViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreatedExt(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreatedExt(view, savedInstanceState)
         binding.apply {
             ivPhoto.glideLoad("https://avatars1.githubusercontent.com/u/24654871?s=460&u=a93f6b361640532acbe98b0c4ba60a83f50c768e&v=4")
 
@@ -30,6 +31,5 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
             }
         }
     }
-
 
 }

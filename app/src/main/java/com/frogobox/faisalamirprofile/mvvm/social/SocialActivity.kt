@@ -14,7 +14,8 @@ class SocialActivity : BaseActivity<ActivitySocialBinding>() {
 
     override fun setupViewModel() {}
 
-    override fun setupOnCreate(savedInstanceState: Bundle?) {
+    override fun onCreateExt(savedInstanceState: Bundle?) {
+        super.onCreateExt(savedInstanceState)
         setupToolbar()
         setupViewPager()
     }

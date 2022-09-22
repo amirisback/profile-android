@@ -23,29 +23,13 @@ import java.io.IOException
  */
 object FuncHelper {
 
-    private fun getJsonAssets(context: Context, filename: String): String? {
-        val jsonString: String
-        try {
-            jsonString = context.assets.open(filename).bufferedReader().use { it.readText() }
-        } catch (ioException: IOException) {
-            ioException.printStackTrace()
-            return null
-        }
-        return jsonString
-    }
-
     fun listProduct(context: Context, filename: String): MutableList<Product> {
         val listData = mutableListOf<Product>()
-        val rawJsonData = getJsonAssets(context, filename)
+        val rawJsonData = context.getRawJson(filename)
         val typeTokenProduct = object : TypeToken<List<Product>>() {}.type
         val tempList: List<Product> = Gson().fromJson(rawJsonData, typeTokenProduct)
         listData.addAll(tempList)
         return listData
-    }
-
-    fun getDrawableString(context: Context, nameResource: String): Int {
-        return context.getResources()
-            .getIdentifier(nameResource, "drawable", context.getPackageName());
     }
 
 }
